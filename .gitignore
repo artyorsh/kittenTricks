@@ -1,30 +1,58 @@
-node_modules/**/*
-.expo/*
-npm-debug.*
-*.jks
-*.jks.bak
-*.p12
-*.key
-*.mobileprovision
-
-# osx
+# OSX
+#
 .DS_Store
 
-# intellij
+# Client
+#
+# Generated
+#
+.generated
+#
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
+
+# IntelliJ
+#
+build/
 .idea
+.gradle
 local.properties
+*.iml
+
+# Visual Studio Code
+#
+.vscode/
 
 # node.js
+#
 node_modules/
 npm-debug.log
+yarn-error.log
 
-# docs
-docs/docs.json
-docs/output.json
+# BUCK
+buck-out/
+\.buckd/
+*.keystore
 
-# config
-config/index.js
+# Bundle artifact
+*.jsbundle
 
-.expo
-.expo-shared/
-dist
+# CocoaPods
+/ios/Pods/
