@@ -4,11 +4,11 @@ import {
   withStyles,
   ThemeType,
   ThemedComponentProps,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   List,
   ListProps,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import {
   LayoutListItem,
   LayoutListItemProps,

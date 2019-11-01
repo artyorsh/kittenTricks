@@ -4,13 +4,13 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   Button,
   Tab,
   TabView,
   Text,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import {
   SignInForm3,
   SignInForm3Data,

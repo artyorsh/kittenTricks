@@ -7,12 +7,12 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   ListItem,
   ListItemProps,
   Text,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import { LayoutGridListItemData } from './type';
 import { textStyle } from '../style';
 

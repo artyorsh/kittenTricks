@@ -3,11 +3,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   Input,
   InputProps,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 
 interface ComponentProps extends InputProps {
   validator: (value: string) => boolean;

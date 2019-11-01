@@ -4,8 +4,8 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
-import { Text } from '@kitten/ui';
+} from 'react-native-ui-kitten';
+import { Text } from 'react-native-ui-kitten';
 import { Message } from '@src/core/model';
 import { textStyle } from '@src/components/common';
 

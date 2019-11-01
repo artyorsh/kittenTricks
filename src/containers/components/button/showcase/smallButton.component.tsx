@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Button,
   ButtonProps,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 
 type ButtonElement = React.ReactElement<ButtonProps>;
 

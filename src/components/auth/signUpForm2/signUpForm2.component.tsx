@@ -7,8 +7,8 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
-import { CheckBox } from '@kitten/ui';
+} from 'react-native-ui-kitten';
+import { CheckBox } from 'react-native-ui-kitten';
 import {
   textStyle,
   ValidationInput,

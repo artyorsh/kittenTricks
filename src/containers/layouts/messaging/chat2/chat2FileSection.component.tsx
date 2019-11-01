@@ -8,21 +8,18 @@ import {
   View,
   ViewProps,
 } from 'react-native';
-import * as MediaLibrary from 'expo-media-library';
-import { Camera } from 'expo-camera';
+import { RNCamera } from 'react-native-camera';
 import {
   StyleType,
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
-import {
   Button,
   ListItem,
   ListItemProps,
   Text,
   ViewPagerProps,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import {
   CameraIconFill,
   FileTextIconFill,
@@ -31,16 +28,17 @@ import {
   PeopleIconFill,
 } from '@src/assets/icons';
 import { textStyle } from '@src/components/common';
+import { PhotoIdentifier } from '@react-native-community/cameraroll';
 
 interface ComponentProps {
-  galleryFiles: MediaLibrary.Asset[];
+  galleryFiles: any[];
   onCancelButtonPress: () => void;
   onPhotoOrVideoButtonPress: () => void;
   onFileButtonPress: () => void;
   onLocationButtonPress: () => void;
   onContactButtonPress: () => void;
   onTakePhotoButtonPress: () => void;
-  onGalleryItemPress: (item: MediaLibrary.Asset) => void;
+  onGalleryItemPress: (item: any) => void;
 }
 
 interface AddActionType {
@@ -81,7 +79,7 @@ class Chat2FileSectionComponent extends React.Component<Chat2FileSectionComponen
     this.props.onTakePhotoButtonPress();
   };
 
-  private onGalleryItemPress = (item: MediaLibrary.Asset): void => {
+  private onGalleryItemPress = (item: any): void => {
     this.props.onGalleryItemPress(item);
   };
 
@@ -124,8 +122,8 @@ class Chat2FileSectionComponent extends React.Component<Chat2FileSectionComponen
 
     return (
       <View style={themedStyle.pagerItem} key={0}>
-        <Camera
-          type={Camera.Constants.Type.back}
+        <RNCamera
+          type={RNCamera.Constants.Type.back}
           style={themedStyle.cameraView}>
           <View style={themedStyle.cameraContentContainer}>
             <Button
@@ -135,12 +133,12 @@ class Chat2FileSectionComponent extends React.Component<Chat2FileSectionComponen
               onPress={this.onTakePhotoPress}
             />
           </View>
-        </Camera>
+        </RNCamera>
       </View>
     );
   };
 
-  private renderGalleryItem = (item: MediaLibrary.Asset,
+  private renderGalleryItem = (item: PhotoIdentifier,
                                index: number): React.ReactElement<TouchableOpacityProps> => {
 
     const { themedStyle } = this.props;
@@ -151,7 +149,7 @@ class Chat2FileSectionComponent extends React.Component<Chat2FileSectionComponen
         activeOpacity={0.95}
         onPress={() => this.onGalleryItemPress(item)}>
         <Image
-          source={{ uri: item.uri }}
+          source={{ uri: item.node.image.uri }}
           style={themedStyle.pagerItem}
         />
       </TouchableOpacity>

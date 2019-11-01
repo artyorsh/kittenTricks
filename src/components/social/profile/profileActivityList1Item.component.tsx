@@ -9,7 +9,7 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import { ActivityAuthoring } from '@src/components/common';
 import { ProfileActivityBar } from './profileActivityBar.component';
 

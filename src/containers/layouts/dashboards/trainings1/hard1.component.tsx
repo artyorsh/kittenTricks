@@ -4,9 +4,9 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import { Exercise } from '@src/core/model/exercise.model';
-import { List } from '@kitten/ui';
+import { List } from 'react-native-ui-kitten';
 import {
   TrainingCard2,
   TrainingCardProps,

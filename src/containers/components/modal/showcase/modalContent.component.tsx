@@ -7,12 +7,12 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   Button,
   Text,
   Avatar,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import { textStyle } from '@src/components/common';
 import { Profile } from '@src/core/model';
 

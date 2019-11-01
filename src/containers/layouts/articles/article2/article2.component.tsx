@@ -7,11 +7,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   Avatar,
   Text,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import { ArticleActivityBar } from '@src/components/articles';
 import {
   ContainerView,

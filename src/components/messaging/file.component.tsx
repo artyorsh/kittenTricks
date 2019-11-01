@@ -3,7 +3,7 @@ import {
   ImageBackgroundProps,
   ImageProps,
 } from 'react-native';
-import { StyleType } from '@kitten/theme';
+import { StyleType } from 'react-native-ui-kitten';
 import {
   FileType,
   Message,

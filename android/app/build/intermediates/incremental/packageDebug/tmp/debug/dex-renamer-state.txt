@@ -1,0 +1,4 @@
+#Fri Nov 01 22:13:27 MSK 2019
+base.0=/Users/artyorsh/Repositories/kitten-tricks-no-expo/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

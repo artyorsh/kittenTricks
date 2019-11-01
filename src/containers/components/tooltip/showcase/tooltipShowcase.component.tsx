@@ -4,7 +4,7 @@ import {
   CheckBoxProps,
   TooltipProps,
   Tooltip,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import { StyleSheet } from 'react-native';
 
 interface TooltipShowcaseComponentState {

@@ -5,7 +5,7 @@ import {
   TopNavigationProps,
   TopNavigationAction,
   TopNavigationActionProps,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import {
   StarIconFill,
   ArrowIosBackFill,

@@ -5,11 +5,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   BottomNavigation,
   BottomNavigationTab,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import {
   ColorPaletteIconOutline,
   LayoutIconOutline,

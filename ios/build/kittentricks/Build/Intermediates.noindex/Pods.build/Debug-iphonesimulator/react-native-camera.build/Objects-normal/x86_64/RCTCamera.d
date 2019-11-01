@@ -1,0 +1,31 @@
+dependencies: \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/node_modules/react-native-camera/ios/RCT/RCTCamera.m \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Target\ Support\ Files/react-native-camera/react-native-camera-prefix.pch \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTBridge.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-DevSupport/React/RCTInspectorDevServerHelper.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-DevSupport/React/RCTPackagerConnection.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTFrameUpdate.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTInvalidating.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/node_modules/react-native-camera/ios/RCT/RCTCamera.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/node_modules/react-native-camera/ios/RCT/CameraFocusSquare.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/node_modules/react-native-camera/ios/RCT/RCTCameraManager.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTViewManager.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTConvert.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTAnimationType.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTBorderStyle.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTLog.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTAssert.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTUtils.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTPointerEvents.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTTextDecorationLineType.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Private/yoga/Yoga.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Private/yoga/YGEnums.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Private/yoga/YGMacros.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Private/yoga/YGValue.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTEventDispatcher.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/UIView+React.h \
+  /Users/artyorsh/Repositories/kitten-tricks-no-expo/ios/Pods/Headers/Public/React-Core/React/RCTComponent.h

@@ -6,18 +6,17 @@ import {
   View,
   ViewProps,
 } from 'react-native';
-import * as MediaLibrary from 'expo-media-library';
 import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   Button,
   ButtonProps,
   Input,
   List,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import {
   Alignments,
   ChatFileMessage,
@@ -51,7 +50,7 @@ interface ComponentProps {
   conversation: ConversationModel;
   fileSectionOpened: boolean;
   newMessage: string;
-  galleryFiles: MediaLibrary.Asset[];
+  galleryFiles: any[];
   fileMessageAppearance: ChatFileMessageAppearance; // just for demo purposes
   onNewMessageChange: (text: string) => void;
   onMessageAdd: () => void;
@@ -62,7 +61,7 @@ interface ComponentProps {
   onLocationButtonPress: () => void;
   onContactButtonPress: () => void;
   onTakePhotoButtonPress: () => void;
-  onGalleryItemPress: (item: MediaLibrary.Asset) => void;
+  onGalleryItemPress: (item: any) => void;
 }
 
 export type Chat2ComponentProps = ThemedComponentProps & ComponentProps;

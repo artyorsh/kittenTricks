@@ -4,8 +4,8 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
-import { Button } from '@kitten/ui';
+} from 'react-native-ui-kitten';
+import { Button } from 'react-native-ui-kitten';
 import {
   ProfileInfo1,
   ProfileSocials,

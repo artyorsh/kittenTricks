@@ -5,7 +5,7 @@ import {
   ListItem,
   ListItemProps,
   ListProps,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import { StarIconFill } from '@src/assets/icons';
 
 

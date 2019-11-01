@@ -4,12 +4,12 @@ import {
   withStyles,
   ThemeType,
   ThemedComponentProps,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   Button,
   Input,
   Text,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import { BookHeader } from '@src/components/ecommerce';
 import { CommentsList1 } from '@src/components/articles';
 import {

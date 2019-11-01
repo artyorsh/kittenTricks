@@ -5,7 +5,7 @@ import {
   OverflowMenu,
   OverflowMenuProps,
   OverflowMenuItemType,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import { StarIconFill } from '@src/assets/icons';
 
 interface OverflowMenuShowcaseComponentState {

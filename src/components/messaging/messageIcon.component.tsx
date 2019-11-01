@@ -5,7 +5,7 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import { DoneAllIconOutline } from '@src/assets/icons';
 import { Message } from '@src/core/model';
 

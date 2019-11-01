@@ -3,11 +3,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   Button,
   Text,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import {
   SignInForm2,
   SignInForm2Data,

@@ -1,4 +1,4 @@
-import { StyleType } from '@kitten/theme';
+import { StyleType } from 'react-native-ui-kitten';
 
 export enum Alignments {
   'ROW-LEFT' = 'row-left',

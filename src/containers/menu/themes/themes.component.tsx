@@ -3,16 +3,15 @@ import { ListRenderItemInfo } from 'react-native';
 import {
   List,
   ListItemProps,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import {
   ThemedComponentProps,
   ThemeProvider,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import { ThemeCard } from './themeCard.component';
 import { Theme } from './type';
-import { fireAnalyticsEvent } from '@src/core/utils/analytics';
 
 interface ComponentProps {
   data: Theme[];
@@ -24,23 +23,9 @@ type ThemesProps = ThemedComponentProps & ComponentProps;
 
 class ThemesComponent extends React.Component<ThemesProps> {
 
-  private onThemeChangeAnalyticsEventError = (error: any): void => {
-    console.warn('Analytics error: ', error.message);
-  };
-
-  private fireAnalyticsEvent = (theme: string): void => {
-    fireAnalyticsEvent({
-      category: 'Theming',
-      action: 'Theme change',
-      label: theme,
-    })
-      .catch(this.onThemeChangeAnalyticsEventError);
-  };
-
   private onItemPress = (index: number) => {
     const { [index]: theme } = this.props.data;
 
-    this.fireAnalyticsEvent(theme.name);
     this.props.onToggleTheme(theme.name);
   };
 

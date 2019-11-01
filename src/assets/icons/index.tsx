@@ -13,7 +13,7 @@ import {
 import {
   Icon,
   IconElement,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 
 export const MenuIconAuth = (style: StyleProp<ImageStyle>): AssetIconElement => {
   const source: IconSource = {

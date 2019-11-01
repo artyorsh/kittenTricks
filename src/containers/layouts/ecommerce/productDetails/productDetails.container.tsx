@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavigationStackScreenProps } from 'react-navigation-stack';
-import { ModalService } from '@kitten/theme';
+import { ModalService } from 'react-native-ui-kitten';
 import {
   Comment,
   Product,

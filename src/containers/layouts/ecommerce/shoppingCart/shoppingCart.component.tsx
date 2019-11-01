@@ -7,12 +7,12 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   List,
   Button,
   Text,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import {
   ContainerView,
   textStyle,

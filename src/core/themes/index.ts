@@ -3,7 +3,7 @@ import {
   light,
 } from '@eva-design/eva';
 import { default as appTheme } from './appTheme.json';
-import { ThemeType } from '@kitten/theme';
+import { ThemeType } from 'react-native-ui-kitten';
 
 interface ThemeRegistry {
   ['Eva Light']: ThemeType;

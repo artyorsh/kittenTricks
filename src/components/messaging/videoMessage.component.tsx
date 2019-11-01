@@ -8,7 +8,7 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import { PlayCircleIconFill } from '@src/assets/icons';
 import { Message } from '@src/core/model';
 import { ChatFileMessageAppearance } from './type';

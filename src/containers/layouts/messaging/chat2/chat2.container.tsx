@@ -1,7 +1,9 @@
 import React from 'react';
+import CameraRoll, {
+  PhotoIdentifier,
+  PhotoIdentifiersPage,
+} from '@react-native-community/cameraroll';
 import { NavigationStackScreenProps } from 'react-navigation-stack';
-import * as MediaLibrary from 'expo-media-library';
-import * as Permissions from 'expo-permissions';
 import {
   ChatFileMessageAppearance,
   ChatHeader,
@@ -13,7 +15,10 @@ import {
   Message,
   Profile,
 } from '@src/core/model';
-import { conversation5, conversation6 } from '@src/core/data/conversation';
+import {
+  conversation5,
+  conversation6,
+} from '@src/core/data/conversation';
 import {
   profile1,
   profile2,
@@ -23,7 +28,7 @@ import { Chat2 } from './chat2.component';
 
 interface State {
   newMessageText: string;
-  galleryFiles: MediaLibrary.Asset[];
+  galleryFiles: PhotoIdentifier[];
   fileSectionOpened: boolean;
   conversation: Conversation;
 }
@@ -58,8 +63,8 @@ export class Chat2Container extends React.Component<NavigationStackScreenProps, 
   };
 
   public componentWillMount(): void {
-    MediaLibrary.getAssetsAsync({ first: 6 })
-      .then(this.onMediaResponse);
+    CameraRoll.getPhotos({ first: 6 }).then(this.onMediaResponse);
+
     this.props.navigation.setParams({
       interlocutor: this.state.conversation.interlocutor,
       lastSeen: this.state.conversation.lastSeen,
@@ -72,8 +77,8 @@ export class Chat2Container extends React.Component<NavigationStackScreenProps, 
     this.props.navigation.navigate('Test Profile');
   };
 
-  private onMediaResponse = (data: MediaLibrary.PagedInfo<MediaLibrary.Asset>): void => {
-    this.setState({ galleryFiles: data.assets });
+  private onMediaResponse = (data: PhotoIdentifiersPage): void => {
+    this.setState({ galleryFiles: data.edges });
   };
 
   private onNewMessageChange = (newMessageText: string): void => {
@@ -97,15 +102,8 @@ export class Chat2Container extends React.Component<NavigationStackScreenProps, 
     });
   };
 
-  private onCameraPermissionResponse = (result: Permissions.PermissionResponse): void => {
-    if (result.status === 'granted') {
-      this.setState({ fileSectionOpened: true });
-    }
-  };
-
   private onAddButtonPress = (): void => {
-    Permissions.askAsync(Permissions.CAMERA_ROLL)
-      .then(this.onCameraPermissionResponse);
+    this.setState({ fileSectionOpened: true });
   };
 
   private onCancelButtonPress = (): void => {
@@ -136,7 +134,7 @@ export class Chat2Container extends React.Component<NavigationStackScreenProps, 
     this.props.navigation.goBack(null);
   };
 
-  private onGalleryItemPress = (item: MediaLibrary.Asset) => {
+  private onGalleryItemPress = (item: any) => {
     // TODO: resolve somehow the possibility of adding a real asset
     const profiles: Profile[] = [profile1, profile2];
     const newMessage: Message = {

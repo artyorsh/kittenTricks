@@ -5,12 +5,12 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   TopNavigationActionProps,
   TopNavigationAction,
   TopNavigation,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import { SafeAreaView } from '@src/core/navigation';
 import {
   ArrowIosBackFill,

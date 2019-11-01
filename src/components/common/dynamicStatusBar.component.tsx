@@ -10,9 +10,8 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import { ThemeKey } from '@src/core/themes';
-import Constants from 'expo-constants';
 
 interface ComponentProps {
   currentTheme: ThemeKey;
@@ -51,7 +50,7 @@ export const DynamicStatusBar = withStyles(DynamicStatusBarComponent, (theme: Th
   container: {
     backgroundColor: theme['background-basic-color-1'],
     height: Platform.select({
-      ios: Constants.statusBarHeight,
+      ios: StatusBar.currentHeight,
       android: 0,
     }),
   },

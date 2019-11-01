@@ -4,11 +4,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   List,
   ListProps,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import { Comment } from '@src/core/model';
 import {
   CommentList2Item,

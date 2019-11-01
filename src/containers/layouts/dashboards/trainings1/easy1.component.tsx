@@ -12,7 +12,7 @@ import {
   ThemeType,
   ThemedComponentProps,
   StyleType,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import { Exercise } from '@src/core/model/exercise.model';
 import {
   TrainingCard1,
@@ -21,7 +21,7 @@ import {
 import {
   List,
   Text,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import { textStyle } from '@src/components/common';
 
 interface ComponentProps {

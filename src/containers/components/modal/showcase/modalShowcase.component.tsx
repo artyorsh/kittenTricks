@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Button,
   Modal,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import { ModalContent } from './modalContent.component';
 import { StyleSheet } from 'react-native';
 import { profile1 } from '@src/core/data/profile';

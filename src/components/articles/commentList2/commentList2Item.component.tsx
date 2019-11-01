@@ -8,7 +8,7 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   ActivityAuthoring,
   textStyle,
@@ -17,7 +17,7 @@ import {
   ListItem,
   ListItemProps,
   Text,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import { MoreHorizontalIconFill } from '@src/assets/icons';
 import { Comment } from '@src/core/model';
 

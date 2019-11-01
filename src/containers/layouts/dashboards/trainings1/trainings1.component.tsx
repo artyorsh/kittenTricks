@@ -3,11 +3,11 @@ import {
   withStyles,
   ThemeType,
   ThemedComponentProps,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   TabView,
   Tab,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import { Easy1 } from './easy1.component';
 import { Medium1 } from './medium1.component';
 import { Hard1 } from './hard1.component';

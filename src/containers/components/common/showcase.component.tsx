@@ -7,7 +7,7 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import { ShowcaseSectionProps } from './showcaseSection.component';
 import {
   ScrollableAvoidKeyboard,

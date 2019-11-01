@@ -1,21 +1,17 @@
-const path = require('path');
-const Config = require('./config');
+/**
+ * Metro configuration for React Native
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ */
 
 module.exports = {
-  resolver: {
-    sourceExts: [
-      'js',
-      'ts',
-      'tsx',
-    ],
-    extraNodeModules: new Proxy({}, {
-      get: (target, name) => path.join(process.cwd(), `node_modules/${name}`),
+  transformer: {
+    getTransformOptions: async () => ({
+      transform: {
+        experimentalImportSupport: false,
+        inlineRequires: false,
+      },
     }),
   },
-  watchFolders: [
-    path.resolve(Config.KITTEN_PATH, 'theme'),
-    path.resolve(Config.KITTEN_PATH, 'ui'),
-    path.resolve(Config.MAPPING_PATH),
-    path.resolve(Config.PROCESSOR_PATH),
-  ],
 };

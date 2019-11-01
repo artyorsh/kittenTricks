@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BottomNavigation,
   BottomNavigationTab,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 
 interface State {
   selectedIndex: number;

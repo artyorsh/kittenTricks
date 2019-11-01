@@ -4,13 +4,13 @@ import {
   ThemeProvider,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   Tab,
   TabProps,
   TabView,
   TabViewProps,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import {
   GridIconOutline,
   ListIconFill,

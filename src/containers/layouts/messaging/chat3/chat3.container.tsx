@@ -1,7 +1,9 @@
 import React from 'react';
+import CameraRoll, {
+  PhotoIdentifier,
+  PhotoIdentifiersPage,
+} from '@react-native-community/cameraroll';
 import { NavigationStackScreenProps } from 'react-navigation-stack';
-import * as MediaLibrary from 'expo-media-library';
-import * as Permissions from 'expo-permissions';
 import {
   ChatHeader,
   ChatHeaderNavigationStateParams,
@@ -23,7 +25,7 @@ import { imageMessage2 } from '@src/assets/images';
 
 interface State {
   newMessageText: string;
-  galleryFiles: MediaLibrary.Asset[];
+  galleryFiles: PhotoIdentifier[];
   fileSectionOpened: boolean;
   conversation: Conversation;
 }
@@ -58,9 +60,8 @@ export class Chat3Container extends React.Component<NavigationStackScreenProps, 
   };
 
   public componentWillMount(): void {
-    MediaLibrary.getAssetsAsync({ first: 6 })
-      .then((data: MediaLibrary.PagedInfo<MediaLibrary.Asset>) =>
-        this.setState({ galleryFiles: data.assets }));
+    CameraRoll.getPhotos({ first: 6 }).then(this.onMediaResponse);
+
     this.props.navigation.setParams({
       interlocutor: this.state.conversation.interlocutor,
       lastSeen: this.state.conversation.lastSeen,
@@ -71,6 +72,10 @@ export class Chat3Container extends React.Component<NavigationStackScreenProps, 
 
   private onProfilePress = (profile: Profile): void => {
     this.props.navigation.navigate('Test Profile');
+  };
+
+  private onMediaResponse = (data: PhotoIdentifiersPage): void => {
+    this.setState({ galleryFiles: data.edges });
   };
 
   private onNewMessageChange = (newMessageText: string): void => {
@@ -94,15 +99,8 @@ export class Chat3Container extends React.Component<NavigationStackScreenProps, 
     });
   };
 
-  private onCameraPermissionResponse = (result: Permissions.PermissionResponse): void => {
-    if (result.status === 'granted') {
-      this.setState({ fileSectionOpened: true });
-    }
-  };
-
   private onAddButtonPress = (): void => {
-    Permissions.askAsync(Permissions.CAMERA_ROLL)
-      .then(this.onCameraPermissionResponse);
+    this.setState({ fileSectionOpened: true });
   };
 
   private onCancelButtonPress = (): void => {
@@ -133,7 +131,7 @@ export class Chat3Container extends React.Component<NavigationStackScreenProps, 
     this.props.navigation.goBack(null);
   };
 
-  private onGalleryItemPress = (item: MediaLibrary.Asset) => {
+  private onGalleryItemPress = (item: any) => {
     const profiles: Profile[] = [profile1, profile2];
     const newMessage: Message = {
       file: {

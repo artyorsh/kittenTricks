@@ -4,7 +4,7 @@ import {
   TabView,
   TabViewProps,
   Text,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 
 type TabViewElement = React.ReactElement<TabViewProps>;
 

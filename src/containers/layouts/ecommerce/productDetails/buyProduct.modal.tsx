@@ -10,12 +10,12 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from 'react-native-ui-kitten';
 import {
   List,
   Button,
   Text,
-} from '@kitten/ui';
+} from 'react-native-ui-kitten';
 import { Product as ProductModel } from '@src/core/model';
 import { BuyActionModel } from './productDetails.container';
 import { textStyle } from '@src/components/common';

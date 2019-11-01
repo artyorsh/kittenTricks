@@ -1,5 +1,5 @@
 import React from 'react';
-import { TooltipProps } from '@kitten/ui';
+import { TooltipProps } from 'react-native-ui-kitten';
 import { TooltipShowcase } from './tooltipShowcase.component';
 
 type TooltipElement = React.ReactElement<TooltipProps>;

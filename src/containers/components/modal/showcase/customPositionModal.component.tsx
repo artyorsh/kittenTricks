@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { ModalProps } from '@kitten/ui';
+import { ModalProps } from 'react-native-ui-kitten';
 import { ModalShowcase } from './modalShowcase.component';
 
 type ModalElement = React.ReactElement<ModalProps>;

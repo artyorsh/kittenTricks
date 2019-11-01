@@ -1,15 +1,17 @@
 import React from 'react';
-import { Platform } from 'react-native';
+import {
+  Platform,
+  StatusBar,
+} from 'react-native';
 import {
   SafeAreaView as SafeAreaViewReactNavigation,
   SafeAreaViewProps,
 } from 'react-navigation';
-import Constants from 'expo-constants';
 
 export class SafeAreaView extends React.Component<SafeAreaViewProps> {
 
   private statusBarHeight: number = Platform.select({
-    ios: Constants.statusBarHeight,
+    ios: StatusBar.currentHeight,
     android: 0,
   });
 
@@ -17,7 +19,7 @@ export class SafeAreaView extends React.Component<SafeAreaViewProps> {
     // @ts-ignore (private API)
     // https://github.com/expo/expo/issues/2940#issuecomment-445937038
 
-    SafeAreaViewReactNavigation.setStatusBarHeight(this.statusBarHeight);
+    // SafeAreaViewReactNavigation.setStatusBarHeight(this.statusBarHeight);
   }
 
   public render(): React.ReactElement<SafeAreaViewProps> {

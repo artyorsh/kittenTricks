@@ -7,8 +7,8 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
-import { Text } from '@kitten/ui';
+} from 'react-native-ui-kitten';
+import { Text } from 'react-native-ui-kitten';
 import {
   ArticleActivityBar,
   ArticleTips,
