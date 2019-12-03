@@ -10,13 +10,11 @@ import {
 } from '@kitten/theme';
 import {
   Input,
+  Layout,
   Text,
 } from '@kitten/ui';
 import { CommentsList1 } from '@src/components/articles';
-import {
-  ContainerView,
-  textStyle,
-} from '@src/components/common';
+import { ContainerView } from '@src/components/common';
 import {
   Article,
   Comment,
@@ -64,7 +62,7 @@ class Article3Component extends React.Component<Article3Props> {
       <ContainerView style={themedStyle.container}>
         <Text
           style={themedStyle.titleLabel}
-          category='h4'>
+          category='h2'>
           {article.title}
         </Text>
         <Text
@@ -81,41 +79,29 @@ class Article3Component extends React.Component<Article3Props> {
           category='s1'>
           {article.content}
         </Text>
-        <View style={themedStyle.articleAuthorContainer}>
-          <Text
-            style={themedStyle.articleAuthorLabel}
-            appearance='hint'
-            category='p2'>
-            {`By ${article.author.firstName} ${article.author.lastName}`}
-          </Text>
-          <Text
-            style={themedStyle.articleDateLabel}
-            appearance='hint'
-            category='p2'>
-            {article.date}
-          </Text>
-        </View>
-        <View style={themedStyle.inputContainer}>
-          <Text
-            style={[themedStyle.inputLabel, themedStyle.inputSpace]}
-            category='s1'>
-            Comments
-          </Text>
-          <Input
-            style={themedStyle.inputSpace}
-            textStyle={textStyle.paragraph}
-            placeholder='Write your comment'
-            value={currentCommentText}
-            onChangeText={this.onCommentTextChange}
-            onSubmitEditing={this.handleTextSubmit}
+        <Layout style={{ paddingHorizontal: 24 }}>
+          <View style={themedStyle.inputContainer}>
+            <Text
+              style={[themedStyle.inputLabel, themedStyle.inputSpace]}
+              category='s1'>
+              Comments
+            </Text>
+            <Input
+              style={themedStyle.inputSpace}
+              placeholder='Write your comment...'
+              size='large'
+              value={currentCommentText}
+              onChangeText={this.onCommentTextChange}
+              onSubmitEditing={this.handleTextSubmit}
+            />
+          </View>
+          <CommentsList1
+            data={comments}
+            onLikePress={this.onLikePress}
+            onMorePress={this.onMorePress}
+            onReplyMorePress={this.onReplyMorePress}
           />
-        </View>
-        <CommentsList1
-          data={comments}
-          onLikePress={this.onLikePress}
-          onMorePress={this.onMorePress}
-          onReplyMorePress={this.onReplyMorePress}
-        />
+        </Layout>
       </ContainerView>
     );
   }
@@ -123,10 +109,11 @@ class Article3Component extends React.Component<Article3Props> {
 
 export const Article3 = withStyles(Article3Component, (theme: ThemeType) => ({
   container: {
-    backgroundColor: theme['background-basic-color-1'],
+    backgroundColor: theme['background-basic-color-2'],
   },
   image: {
     minHeight: 240,
+    marginVertical: 8,
   },
   authorPhoto: {
     position: 'absolute',
@@ -140,34 +127,23 @@ export const Article3 = withStyles(Article3Component, (theme: ThemeType) => ({
     marginHorizontal: 24,
     marginTop: 24,
     marginBottom: 16,
-    ...textStyle.headline,
   },
   descriptionLabel: {
     marginHorizontal: 24,
-    marginVertical: 24,
-    ...textStyle.subtitle,
+    marginVertical: 16,
   },
   contentLabel: {
     marginHorizontal: 24,
-    marginTop: 24,
-    marginBottom: 16,
-    ...textStyle.paragraph,
+    marginVertical: 16,
   },
   articleAuthorContainer: {
     marginHorizontal: 24,
     flexDirection: 'row',
   },
-  articleAuthorLabel: textStyle.paragraph,
-  articleDateLabel: textStyle.paragraph,
-  inputSpace: {
-    marginHorizontal: 24,
-  },
   inputContainer: {
-    marginTop: 44,
-    marginBottom: 24,
+    marginVertical: 16,
   },
   inputLabel: {
     marginBottom: 8,
-    ...textStyle.subtitle,
   },
 }));

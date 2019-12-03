@@ -20,7 +20,6 @@ import {
   FlashIconOutline,
 } from '@src/assets/icons';
 import { Exercise } from '@src/core/model';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   training: Exercise;
@@ -109,7 +108,6 @@ export const TrainingCard3 = withStyles(TrainingCard3Component, (theme: ThemeTyp
   },
   titleLabel: {
     marginHorizontal: 18,
-    ...textStyle.headline,
   },
   controlsContainer: {
     flexDirection: 'row',
@@ -119,7 +117,6 @@ export const TrainingCard3 = withStyles(TrainingCard3Component, (theme: ThemeTyp
     fontSize: 13,
     fontWeight: 'normal',
     color: theme['text-hint-color'],
-    ...textStyle.button,
   },
   timingButton: {
     marginLeft: 8,

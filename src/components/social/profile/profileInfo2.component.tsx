@@ -13,7 +13,6 @@ import {
   Avatar,
   Text,
 } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 import { PinIconFill } from '@src/assets/icons';
 import { ProfileLocation } from './profileLocation.component';
 
@@ -36,7 +35,6 @@ class ProfileInfo2Component extends React.Component<ProfileInfo2Props> {
         {...restProps}>
         <View style={themedStyle.detailsContainer}>
           <Text
-            style={themedStyle.nameLabel}
             category='h6'>
             {name}
           </Text>
@@ -62,7 +60,6 @@ export const ProfileInfo2 = withStyles(ProfileInfo2Component, (theme: ThemeType)
     alignItems: 'center',
   },
   detailsContainer: {},
-  nameLabel: textStyle.headline,
   locationLabel: {
     marginTop: 8,
   },

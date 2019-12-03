@@ -8,7 +8,6 @@ import { Text } from '@kitten/ui';
 import {
   ImageOverlay,
   ImageOverlayProps,
-  textStyle,
 } from '@src/components/common';
 
 interface ComponentProps {
@@ -30,12 +29,13 @@ class ArticleHeaderComponent extends React.Component<ArticleHeaderProps> {
         style={[componentStyle.container, style]}>
         <Text
           style={componentStyle.titleLabel}
-          category='h3'>
+          category='h3'
+          status='control'>
           {title}
         </Text>
         <Text
-          style={componentStyle.descriptionLabel}
-          category='h6'>
+          category='h6'
+          status='control'>
           {description}
         </Text>
         {children}
@@ -52,11 +52,5 @@ export const ArticleHeader = withStyles(ArticleHeaderComponent, (theme: ThemeTyp
   },
   titleLabel: {
     textAlign: 'center',
-    color: 'white',
-    ...textStyle.headline,
-  },
-  descriptionLabel: {
-    color: 'white',
-    ...textStyle.subtitle,
   },
 }));

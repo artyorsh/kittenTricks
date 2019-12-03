@@ -12,10 +12,7 @@ import {
   Button,
   Text,
 } from '@kitten/ui';
-import {
-  ContainerView,
-  textStyle,
-} from '@src/components/common';
+import { ContainerView } from '@src/components/common';
 import { PaymentCard as PaymentCardModel } from '@src/core/model';
 import {
   PaymentCard,
@@ -87,7 +84,6 @@ class PaymentComponent extends React.Component<PaymentProps> {
         </View>
         <Button
           style={themedStyle.buyButton}
-          textStyle={textStyle.button}
           size='giant'
           onPress={this.onBuy}>
           BUY
@@ -117,7 +113,6 @@ export const Payment = withStyles(PaymentComponent, (theme: ThemeType) => ({
   },
   addCardLabel: {
     marginTop: 12,
-    ...textStyle.subtitle,
   },
   addCardIcon: {
     width: 48,

@@ -15,7 +15,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 import { MessageIcon } from './messageIcon.component';
 import { ConversationInterlocutor } from './conversationInterlocutor.component';
 
@@ -83,13 +82,13 @@ class ConversationComponent extends React.Component<ConversationProps> {
           </View>
         </View>
         <View style={themedStyle.rightSection}>
-          {this.renderLastMessageIcon()}
           <Text
             style={themedStyle.dateLabel}
             appearance='hint'
             category='p2'>
             {this.getLastMessageDate()}
           </Text>
+          {this.renderLastMessageIcon()}
         </View>
       </TouchableOpacity>
     );
@@ -113,9 +112,6 @@ export const Conversation = withStyles(ConversationComponent, (theme: ThemeType)
   avatar: {
     marginRight: 16,
   },
-  userLabel: textStyle.subtitle,
-  lastMessageLabel: textStyle.caption1,
-  dateLabel: textStyle.paragraph,
   rightSection: {
     flexDirection: 'row',
     alignItems: 'center',

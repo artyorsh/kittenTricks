@@ -18,7 +18,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { StarIconFill } from '@src/assets/icons';
-import { textStyle } from '@src/components/common/style';
 
 interface ComponentProps {
   hint?: string;
@@ -131,7 +130,6 @@ export const RateBar = withStyles(RateBarComponent, (theme: ThemeType) => ({
   },
   hint: {
     marginRight: 8,
-    ...textStyle.caption2,
   },
   icon: {
     width: 16,

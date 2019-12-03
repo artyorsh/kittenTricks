@@ -12,10 +12,7 @@ import {
   SignInForm2,
   SignInForm2Data,
 } from '@src/components/auth';
-import {
-  ScrollableAvoidKeyboard,
-  textStyle,
-} from '@src/components/common';
+import { ScrollableAvoidKeyboard } from '@src/components/common';
 import { View } from 'react-native';
 
 interface ComponentProps {
@@ -59,12 +56,12 @@ class SignIn2Component extends React.Component<SignIn2Props> {
       <ScrollableAvoidKeyboard style={themedStyle.container}>
         <View style={themedStyle.headerContainer}>
           <Text
-            style={themedStyle.helloLabel}
+            status='control'
             category='h1'>
             Hello
           </Text>
           <Text
-            style={themedStyle.signInLabel}
+            status='control'
             category='s1'>
             Sign in to your account
           </Text>
@@ -76,7 +73,6 @@ class SignIn2Component extends React.Component<SignIn2Props> {
         />
         <Button
           style={themedStyle.signInButton}
-          textStyle={textStyle.button}
           size='giant'
           disabled={!this.state.formData}
           onPress={this.onSignInButtonPress}>
@@ -112,14 +108,8 @@ export const SignIn2 = withStyles(SignIn2Component, (theme: ThemeType) => {
       marginTop: 32,
       paddingHorizontal: 16,
     },
-    helloLabel: {
-      color: 'white',
-      ...textStyle.headline,
-    },
     signInLabel: {
       marginTop: 16,
-      color: 'white',
-      ...textStyle.subtitle,
     },
     signInButton: {
       marginHorizontal: 16,
@@ -129,7 +119,6 @@ export const SignIn2 = withStyles(SignIn2Component, (theme: ThemeType) => {
     },
     signUpText: {
       color: theme['text-hint-color'],
-      ...textStyle.subtitle,
     },
   });
 });

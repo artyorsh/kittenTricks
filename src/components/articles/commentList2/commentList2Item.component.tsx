@@ -9,10 +9,7 @@ import {
   ThemeType,
   withStyles,
 } from '@kitten/theme';
-import {
-  ActivityAuthoring,
-  textStyle,
-} from '@src/components/common';
+import { ActivityAuthoring } from '@src/components/common';
 import {
   ListItem,
   ListItemProps,
@@ -91,6 +88,5 @@ export const CommentList2Item = withStyles(CommentList2ItemComponent, (theme: Th
   },
   commentLabel: {
     marginTop: 14,
-    ...textStyle.paragraph,
   },
 }));

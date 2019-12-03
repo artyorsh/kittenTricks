@@ -13,7 +13,6 @@ import {
   Button,
   Text,
 } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   onCancel: () => void;
@@ -34,7 +33,6 @@ class ComingSoonModalComponent extends React.Component<ComingSoonModalProps> {
       <View style={themedStyle.container}>
         <View style={themedStyle.headerContainer}>
           <Text
-            style={themedStyle.titleLabel}
             category='h6'>
             Coming Soon
           </Text>
@@ -45,7 +43,6 @@ class ComingSoonModalComponent extends React.Component<ComingSoonModalProps> {
           </Text>
         </View>
         <Button
-          textStyle={textStyle.button}
           appearance='ghost'
           size='large'
           onPress={this.onCancel}>
@@ -77,10 +74,8 @@ export const ComingSoonModal = withStyles(ComingSoonModalComponent, (theme: Them
       alignItems: 'center',
       justifyContent: 'center',
     },
-    titleLabel: textStyle.headline,
     descriptionLabel: {
       marginTop: 24,
-      ...textStyle.paragraph,
     },
   };
 });

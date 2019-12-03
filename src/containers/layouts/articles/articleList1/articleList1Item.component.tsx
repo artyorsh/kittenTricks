@@ -12,10 +12,6 @@ import {
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
 import { ArticleActivityBar } from '@src/components/articles';
-import {
-  ActivityAuthoring,
-  textStyle,
-} from '@src/components/common';
 import { Article } from '@src/core/model';
 
 // @ts-ignore (override `onPress` prop)
@@ -58,7 +54,6 @@ class ArticleList1ItemComponent extends React.Component<ArticleList1ItemProps> {
         />
         <View style={themedStyle.infoContainer}>
           <Text
-            style={themedStyle.titleLabel}
             category='h5'>
             {article.title}
           </Text>
@@ -75,11 +70,12 @@ class ArticleList1ItemComponent extends React.Component<ArticleList1ItemProps> {
           likes={article.likes}
           onCommentPress={this.onCommentsButtonPress}
           onLikePress={this.onLikeButtonPress}>
-          <ActivityAuthoring
-            photo={article.author.photo.imageSource}
-            name={`${article.author.firstName} ${article.author.lastName}`}
-            date={article.date}
-          />
+          <Text
+            style={themedStyle.dateLabel}
+            appearance='hint'
+            category='p2'>
+            {article.date}
+          </Text>
         </ArticleActivityBar>
       </TouchableOpacity>
     );
@@ -88,25 +84,24 @@ class ArticleList1ItemComponent extends React.Component<ArticleList1ItemProps> {
 
 export const ArticleList1Item = withStyles(ArticleList1ItemComponent, (theme: ThemeType) => ({
   container: {
-    borderRadius: 12,
+    borderRadius: 4,
     overflow: 'hidden',
   },
   infoContainer: {
-    paddingHorizontal: 16,
-    paddingVertical: 24,
+    paddingHorizontal: 24,
+    paddingVertical: 16,
     borderBottomWidth: 1,
     borderBottomColor: theme['border-basic-color-2'],
   },
   activityContainer: {
-    paddingHorizontal: 16,
+    flexDirection: 'row-reverse',
+    paddingHorizontal: 24,
     paddingVertical: 16,
   },
   image: {
     height: 220,
   },
-  titleLabel: textStyle.headline,
   descriptionLabel: {
-    marginTop: 16,
-    ...textStyle.subtitle,
+    marginTop: 8,
   },
 }));

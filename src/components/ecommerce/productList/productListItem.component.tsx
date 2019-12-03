@@ -15,7 +15,6 @@ import {
   Button,
   Text,
 } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 import { CartIconOutline } from '@src/assets/icons';
 
 interface ListDerivedProps {
@@ -59,12 +58,10 @@ class ProductListItemComponent extends React.Component<ProductListItemProps> {
         <View style={themedStyle.infoContainer}>
           <View>
             <Text
-              style={themedStyle.nameLabel}
               category='s1'>
               {name}
             </Text>
             <Text
-              style={themedStyle.typeLabel}
               appearance='hint'
               category='c1'>
               {type}
@@ -72,13 +69,11 @@ class ProductListItemComponent extends React.Component<ProductListItemProps> {
           </View>
           <View style={themedStyle.priceContainer}>
             <Text
-              style={themedStyle.costLabel}
               category='s1'>
               {price}
             </Text>
             <Button
               style={themedStyle.buyButton}
-              textStyle={textStyle.button}
               icon={CartIconOutline}
               onPress={this.onAddToBucket}
             />
@@ -110,9 +105,6 @@ export const ProductListItem = withStyles(ProductListItemComponent, (theme: Them
     width: null,
     height: 140,
   },
-  nameLabel: textStyle.subtitle,
-  typeLabel: textStyle.caption1,
-  costLabel: textStyle.subtitle,
   buyButton: {
     width: 32,
     height: 32,

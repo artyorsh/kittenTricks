@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  ImageBackground,
   ImageSourcePropType,
   View,
 } from 'react-native';
@@ -21,21 +22,15 @@ import {
 import {
   MessageCircleIconFill,
   PersonAddIconFill,
+  PlusIconFill,
 } from '@src/assets/icons';
 import {
   Profile as ProfileModel,
-  ProfileSocials as ProfileSocialsModel,
   ProfileActivity as ProfileActivityModel,
+  ProfileSocials as ProfileSocialsModel,
 } from '@src/core/model';
-import {
-  ContainerView,
-  ImageOverlay,
-  textStyle,
-} from '@src/components/common';
-import {
-  imageProfile7Bg,
-  ImageSource,
-} from '@src/assets/images';
+import { ContainerView } from '@src/components/common';
+import { imageBrandBg } from '@src/assets/images';
 
 interface ComponentProps {
   profile: ProfileModel;
@@ -53,8 +48,6 @@ interface ComponentProps {
 export type Profile7Props = ThemedComponentProps & ComponentProps;
 
 class Profile7Component extends React.Component<Profile7Props> {
-
-  private backgroundImage: ImageSource = imageProfile7Bg;
 
   private onFollowPress = () => {
     this.props.onFollowPress();
@@ -93,9 +86,9 @@ class Profile7Component extends React.Component<Profile7Props> {
 
     return (
       <ContainerView style={themedStyle.container}>
-        <ImageOverlay
+        <ImageBackground
           style={themedStyle.profileInfoContainer}
-          source={this.backgroundImage.imageSource}>
+          source={imageBrandBg.imageSource}>
           <ProfileInfo3
             photo={profile.photo.imageSource}
             name={`${profile.firstName} ${profile.lastName}`}
@@ -104,14 +97,12 @@ class Profile7Component extends React.Component<Profile7Props> {
           <View style={themedStyle.actionContainer}>
             <Button
               style={themedStyle.followButton}
-              textStyle={textStyle.button}
               icon={PersonAddIconFill}
               onPress={this.onFollowPress}>
               FOLLOW
             </Button>
             <Button
               style={themedStyle.messageButton}
-              textStyle={textStyle.button}
               status='control'
               icon={MessageCircleIconFill}
               onPress={this.onMessagePress}>
@@ -128,7 +119,7 @@ class Profile7Component extends React.Component<Profile7Props> {
             onFollowingPress={this.onFollowingPress}
             onPostsPress={this.onPostsPress}
           />
-        </ImageOverlay>
+        </ImageBackground>
         <View
           style={[themedStyle.profileSection, themedStyle.aboutSection]}>
           <Text
@@ -142,13 +133,21 @@ class Profile7Component extends React.Component<Profile7Props> {
             {profile.about}
           </Text>
         </View>
-        <View style={[themedStyle.profileSection, themedStyle.friendsSection]}>
+        <View style={themedStyle.profileSection}>
           <Text style={[themedStyle.profileSectionLabel, themedStyle.friendsSectionLabel]}>Friends</Text>
-          <ProfileFriendList
-            contentContainerStyle={[themedStyle.profileSectionContent, themedStyle.friendsList]}
-            data={profile.friends}
-            onItemPress={this.onFriendPress}
-          />
+          <View style={themedStyle.friendsSection}>
+            <ProfileFriendList
+              style={{ flexGrow: 0 }}
+              data={profile.friends}
+              onItemPress={this.onFriendPress}
+            />
+            <Button
+              style={themedStyle.addFriendButton}
+              appearance='outline'
+              status='control'
+              icon={PlusIconFill}
+            />
+          </View>
         </View>
         <View style={themedStyle.profileSection}>
           <Text style={themedStyle.profileSectionLabel}>Shots</Text>
@@ -193,6 +192,7 @@ export const Profile7 = withStyles(Profile7Component, (theme: ThemeType) => ({
   followButton: {
     flex: 1,
     marginRight: 4,
+    paddingHorizontal: 0,
   },
   messageButton: {
     flex: 1,
@@ -200,19 +200,24 @@ export const Profile7 = withStyles(Profile7Component, (theme: ThemeType) => ({
   },
   profileSectionLabel: {
     marginHorizontal: 16,
-    ...textStyle.subtitle,
   },
   aboutSection: {
     marginTop: 24,
   },
   profileAboutLabel: {
     marginHorizontal: 16,
-    ...textStyle.paragraph,
   },
   shotsSection: {
     marginBottom: 32,
   },
-  friendsList: {
+  friendsSection: {
+    flexDirection: 'row',
     paddingHorizontal: 12,
+  },
+  addFriendButton: {
+    width: 36,
+    height: 36,
+    borderRadius: 36,
+    marginHorizontal: 12,
   },
 }));

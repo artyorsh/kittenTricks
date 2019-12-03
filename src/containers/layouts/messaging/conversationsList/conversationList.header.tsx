@@ -12,7 +12,7 @@ import {
 } from '@kitten/ui';
 import { SafeAreaView } from '@src/core/navigation';
 import {
-  ArrowIosBackFill,
+  ArrowBackFill,
   SearchIconOutline,
 } from '@src/assets/icons';
 
@@ -36,7 +36,7 @@ class ConversationListHeaderComponent extends React.Component<ConversationListHe
   private renderLeftControl = (): React.ReactElement<TopNavigationActionProps> => {
     return (
       <TopNavigationAction
-        icon={ArrowIosBackFill}
+        icon={ArrowBackFill}
         onPress={this.onBack}
       />
     );

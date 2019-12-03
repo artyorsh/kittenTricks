@@ -12,7 +12,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   hint?: string;
@@ -23,7 +22,7 @@ export type ProfileSettingProps = ComponentProps & ViewProps & ThemedComponentPr
 
 class ProfileSettingComponent extends React.Component<ProfileSettingProps> {
 
-  private renderTextElement = (text: string, style: StyleProp<TextStyle>): React.ReactElement<TextProps> => {
+  private renderTextElement = (text: string, style?: StyleProp<TextStyle>): React.ReactElement<TextProps> => {
     return (
       <Text
         style={style}
@@ -41,7 +40,7 @@ class ProfileSettingComponent extends React.Component<ProfileSettingProps> {
       <View
         {...restProps}
         style={[container, style]}>
-        {hint ? this.renderTextElement(hint, hintLabel) : null}
+        {hint ? this.renderTextElement(hint) : null}
         {this.renderTextElement(value, valueLabel)}
       </View>
     );
@@ -56,9 +55,7 @@ export const ProfileSetting = withStyles(ProfileSettingComponent, (theme: ThemeT
     paddingHorizontal: 16,
     paddingVertical: 16,
   },
-  hintLabel: textStyle.caption2,
   valueLabel: {
     color: theme['text-basic-color'],
-    ...textStyle.caption2,
   },
 }));

@@ -16,10 +16,7 @@ import {
   Product,
   Comment,
 } from '@src/core/model';
-import {
-  ContainerView,
-  textStyle,
-} from '@src/components/common';
+import { ContainerView } from '@src/components/common';
 
 interface ComponentProps {
   product: Product;
@@ -91,7 +88,6 @@ class ProductDetailsComponent extends React.Component<ProductDetailsProps, State
         />
         <Button
           style={themedStyle.buyButton}
-          textStyle={textStyle.button}
           size='giant'
           onPress={this.onBuyPress}>
           BUY
@@ -104,7 +100,6 @@ class ProductDetailsComponent extends React.Component<ProductDetailsProps, State
           </Text>
           <Input
             style={themedStyle.input}
-            textStyle={textStyle.paragraph}
             placeholder='Write your comment'
             value={currentCommentText}
             onChangeText={this.onCommentTextChange}
@@ -138,7 +133,6 @@ export const ProductDetails = withStyles(ProductDetailsComponent, (theme: ThemeT
   inputLabel: {
     marginBottom: 8,
     marginHorizontal: 16,
-    ...textStyle.subtitle,
   },
   buyButton: {
     marginHorizontal: 16,

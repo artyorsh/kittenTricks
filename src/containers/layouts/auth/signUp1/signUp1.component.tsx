@@ -21,7 +21,6 @@ import {
 import {
   ScrollableAvoidKeyboard,
   ImageOverlay,
-  textStyle,
 } from '@src/components/common';
 import {
   ArrowForwardIconOutline,
@@ -83,18 +82,6 @@ class SignUp1Component extends React.Component<SignUp1Props, State> {
     this.props.onEwaPress();
   };
 
-  private renderEwaButtonIcon = (style: StyleType): React.ReactElement<ImageProps> => {
-    const { themedStyle } = this.props;
-
-    return HeartIconFill({ ...style, ...themedStyle.ewaButtonIcon });
-  };
-
-  private renderSignInButtonIcon = (style: StyleType): React.ReactElement<ImageProps> => {
-    const { themedStyle } = this.props;
-
-    return ArrowForwardIconOutline({ ...style, ...themedStyle.signInButtonIcon });
-  };
-
   public render(): React.ReactNode {
     const { themedStyle } = this.props;
 
@@ -106,26 +93,24 @@ class SignUp1Component extends React.Component<SignUp1Props, State> {
           <Button
             appearance='ghost'
             style={themedStyle.ewaButton}
-            textStyle={themedStyle.ewaButtonText}
+            status='control'
             size='large'
-            activeOpacity={0.75}
-            icon={this.renderEwaButtonIcon}
+            icon={HeartIconFill}
             onPress={this.onEwaButtonPress}>
             EWA
           </Button>
           <View style={themedStyle.signUpContainer}>
             <Text
-              style={themedStyle.signInLabel}
+              status='control'
               category='h4'>
               SIGN UP
             </Text>
             <Button
               style={themedStyle.signInButton}
-              textStyle={themedStyle.signInButtonText}
               appearance='ghost'
               size='giant'
-              activeOpacity={0.75}
-              icon={this.renderSignInButtonIcon}
+              status='control'
+              icon={ArrowForwardIconOutline}
               onPress={this.onSignInButtonPress}>
               Sign In
             </Button>
@@ -133,7 +118,6 @@ class SignUp1Component extends React.Component<SignUp1Props, State> {
         </ImageOverlay>
         <SocialAuth
           style={themedStyle.socialAuthContainer}
-          hintStyle={themedStyle.socialAuthHint}
           iconStyle={themedStyle.socialAuthIcon}
           hint='Sign with a social account'
           onGooglePress={this.onGoogleButtonPress}
@@ -159,7 +143,6 @@ class SignUp1Component extends React.Component<SignUp1Props, State> {
         />
         <Button
           style={themedStyle.signUpButton}
-          textStyle={textStyle.button}
           size='large'
           disabled={!this.state.formData}
           onPress={this.onSignUpButtonPress}>
@@ -198,37 +181,20 @@ export const SignUp1 = withStyles(SignUp1Component, (theme: ThemeType) => ({
     maxWidth: 72,
     paddingHorizontal: 0,
   },
-  ewaButtonText: {
-    color: 'white',
-    ...textStyle.button,
-  },
   ewaButtonIcon: {
     marginHorizontal: 0,
     tintColor: 'white',
   },
   signInLabel: {
     flex: 1,
-    color: 'white',
-    ...textStyle.headline,
   },
   signInButton: {
     flexDirection: 'row-reverse',
     paddingHorizontal: 0,
   },
-  signInButtonText: {
-    color: 'white',
-    ...textStyle.button,
-  },
-  signInButtonIcon: {
-    marginHorizontal: 0,
-    tintColor: 'white',
-  },
   signUpButton: {
     marginVertical: 24,
     marginHorizontal: 16,
-  },
-  socialAuthHint: {
-    ...textStyle.paragraph,
   },
   socialAuthIcon: {
     tintColor: theme['text-basic-color'],
@@ -241,12 +207,10 @@ export const SignUp1 = withStyles(SignUp1Component, (theme: ThemeType) => ({
   },
   orLabel: {
     marginHorizontal: 8,
-    ...textStyle.headline,
   },
   emailSignLabel: {
     alignSelf: 'center',
     marginTop: 8,
-    ...textStyle.paragraph,
   },
   divider: {
     flex: 1,

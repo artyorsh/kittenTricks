@@ -8,10 +8,7 @@ import {
   ThemeType,
   withStyles,
 } from '@kitten/theme';
-import {
-  textStyle,
-  ValidationInput,
-} from '@src/components/common';
+import { ValidationInput } from '@src/components/common';
 import {
   CardNumberValidator,
   ExpirationDateValidator,
@@ -106,8 +103,6 @@ class AddNewCardComponent extends React.Component<AddPaymentCardFormProps, State
         {...restProps}>
         <ValidationInput
           style={themedStyle.input}
-          textStyle={textStyle.paragraph}
-          labelStyle={textStyle.label}
           label='CARD NUMBER'
           placeholder='0000 0000 0000 0000'
           validator={CardNumberValidator}
@@ -119,8 +114,6 @@ class AddNewCardComponent extends React.Component<AddPaymentCardFormProps, State
         <View style={themedStyle.middleContainer}>
           <ValidationInput
             style={[themedStyle.input, themedStyle.expireInput]}
-            textStyle={textStyle.paragraph}
-            labelStyle={textStyle.label}
             label='EXPIRE DATE'
             placeholder='MM/YY'
             validator={ExpirationDateValidator}
@@ -131,8 +124,6 @@ class AddNewCardComponent extends React.Component<AddPaymentCardFormProps, State
           />
           <ValidationInput
             style={[themedStyle.input, themedStyle.cvvInput]}
-            textStyle={textStyle.paragraph}
-            labelStyle={textStyle.label}
             label='CVV'
             placeholder='CVV'
             validator={CvvValidator}
@@ -144,8 +135,6 @@ class AddNewCardComponent extends React.Component<AddPaymentCardFormProps, State
         </View>
         <ValidationInput
           style={[themedStyle.input, themedStyle.cardholderNameInput]}
-          textStyle={textStyle.paragraph}
-          labelStyle={textStyle.label}
           label='CARDHOLDER NAME'
           placeholder='Enter Name'
           validator={CardholderNameValidator}

@@ -16,10 +16,7 @@ import {
   Book,
   Comment,
 } from '@src/core/model';
-import {
-  ContainerView,
-  textStyle,
-} from '@src/components/common';
+import { ContainerView } from '@src/components/common';
 
 interface ComponentProps {
   book: Book;
@@ -77,18 +74,16 @@ class BookDetailsComponent extends React.Component<BookDetailsProps> {
         />
         <Button
           style={themedStyle.buyButton}
-          textStyle={textStyle.button}
           onPress={this.onBuyBook}>
           BUY BOOK
         </Button>
         <View style={themedStyle.descriptionContainer}>
           <Text
-            style={[themedStyle.sectionLabel, themedStyle.aboutLabel]}
+            style={themedStyle.aboutLabel}
             category='s1'>
             About Book
           </Text>
           <Text
-            style={themedStyle.descriptionLabel}
             appearance='hint'>
             {book.description}
           </Text>
@@ -96,12 +91,11 @@ class BookDetailsComponent extends React.Component<BookDetailsProps> {
         <View style={themedStyle.commentsContainer}>
           <View style={themedStyle.inputContainer}>
             <Text
-              style={[themedStyle.sectionLabel, themedStyle.commentsLabel]}
+              style={themedStyle.commentsLabel}
               category='s1'>
               Comments
             </Text>
             <Input
-              textStyle={textStyle.paragraph}
               placeholder='Write your comment'
               value={currentCommentText}
               onChangeText={this.onCommentTextChange}
@@ -140,14 +134,12 @@ export const BookDetails = withStyles(BookDetailsComponent, (theme: ThemeType) =
     paddingHorizontal: 24,
     marginBottom: 24,
   },
-  sectionLabel: textStyle.subtitle,
   aboutLabel: {
     marginBottom: 16,
   },
   commentsLabel: {
     marginBottom: 8,
   },
-  descriptionLabel: textStyle.paragraph,
   buyButton: {
     marginVertical: 24,
     marginHorizontal: 16,

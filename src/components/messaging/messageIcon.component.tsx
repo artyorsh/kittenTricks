@@ -61,12 +61,12 @@ export class MessageIconComponent extends React.Component<MessageIconProps> {
 
 export const MessageIcon = withStyles(MessageIconComponent, (theme: ThemeType) => ({
   messageIndicatorIcon: {
-    width: 13,
-    height: 8,
-    marginRight: 4,
+    width: 24,
+    height: 24,
+    marginLeft: 8,
   },
   messageIndicatorIconRead: {
-    tintColor: theme['color-primary-default'],
+    tintColor: theme['color-success-default'],
   },
   messageIndicatorIconDelivered: {
     tintColor: theme['text-hint-color'],

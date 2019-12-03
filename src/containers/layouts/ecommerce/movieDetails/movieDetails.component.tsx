@@ -14,10 +14,7 @@ import {
   MovieHeader,
   MovieScreenshotList,
 } from '@src/components/ecommerce';
-import {
-  ContainerView,
-  textStyle,
-} from '@src/components/common';
+import { ContainerView } from '@src/components/common';
 import { Movie as MovieModel } from '@src/core/model';
 
 interface ComponentProps {
@@ -80,7 +77,6 @@ class MovieDetailsComponent extends React.Component<MovieProps> {
           />
           <Button
             style={themedStyle.buyButton}
-            textStyle={textStyle.button}
             size='large'
             onPress={this.onBuyTicket}>
             BUY TICKET
@@ -114,12 +110,10 @@ export const Movie = withStyles(MovieDetailsComponent, (theme: ThemeType) => ({
   sectionLabel: {
     marginHorizontal: 16,
     marginBottom: 16,
-    ...textStyle.subtitle,
   },
   descriptionLabel: {
     marginHorizontal: 16,
     marginBottom: 32,
-    ...textStyle.subtitle,
   },
   screenshotList: {
     backgroundColor: theme['background-basic-color-1'],

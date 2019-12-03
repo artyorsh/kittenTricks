@@ -16,10 +16,7 @@ import {
   ProfileSocials as ProfileSocialsModel,
   Post as PostModel,
 } from '@src/core/model';
-import {
-  ContainerView,
-  textStyle,
-} from '@src/components/common';
+import { ContainerView } from '@src/components/common';
 
 interface ComponentProps {
   profile: ProfileModel;
@@ -82,7 +79,6 @@ class Profile1Component extends React.Component<Profile1Props> {
             />
             <Button
               style={themedStyle.followButton}
-              textStyle={textStyle.button}
               onPress={this.onFollowButtonPress}>
               FOLLOW
             </Button>

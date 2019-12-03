@@ -36,6 +36,7 @@ class SocialAuthButtonComponent extends React.Component<SocialButtonProps> {
       <Button
         appearance='ghost'
         size='giant'
+        status='control'
         {...restProps}
         icon={this.renderIcon}
       />

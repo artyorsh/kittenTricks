@@ -17,7 +17,6 @@ import {
 import {
   ContainerView,
   RateBar,
-  textStyle,
 } from '@src/components/common';
 import {
   ArrowHeadDownIconFill,
@@ -90,7 +89,6 @@ class Profile4Component extends React.Component<Profile4Props> {
           />
           <Button
             style={themedStyle.followButton}
-            textStyle={textStyle.button}
             onPress={this.onFollowButtonPress}>
             FOLLOW
           </Button>
@@ -147,7 +145,6 @@ export const Profile4 = withStyles(Profile4Component, (theme: ThemeType) => ({
   },
   descriptionLabel: {
     marginVertical: 24,
-    ...textStyle.paragraph,
   },
   profileParameter: {
     flex: 1,

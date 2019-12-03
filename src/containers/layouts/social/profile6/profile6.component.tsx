@@ -29,10 +29,7 @@ import {
   CategorisedProfileActivity as CategorisedProfileActivityModel,
   Post,
 } from '@src/core/model';
-import {
-  ContainerView,
-  textStyle,
-} from '@src/components/common';
+import { ContainerView } from '@src/components/common';
 
 interface ComponentProps {
   profile: ProfileModel;
@@ -121,14 +118,12 @@ class Profile6Component extends React.Component<Profile6Props> {
         <View style={themedStyle.actionContainer}>
           <Button
             style={themedStyle.followButton}
-            textStyle={textStyle.button}
             icon={PersonAddIconFill}
             onPress={this.onFollowPress}>
             FOLLOW
           </Button>
           <Button
             style={themedStyle.messageButton}
-            textStyle={textStyle.button}
             appearance='outline'
             icon={MessageCircleIconFill}
             onPress={this.onMessagePress}>
@@ -191,6 +186,5 @@ export const Profile6 = withStyles(Profile6Component, (theme: ThemeType) => ({
   categoryLabel: {
     marginHorizontal: 24,
     marginTop: 8,
-    ...textStyle.subtitle,
   },
 }));

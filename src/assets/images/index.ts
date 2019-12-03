@@ -8,6 +8,14 @@ export {
   RemoteImage,
 } from './type';
 
+export const imageBrandLogo: ImageSource = {
+  imageSource: require('./source/image-brand-logo.png'),
+};
+
+export const imageBrandBg: ImageSource = {
+  imageSource: require('./source/image-background-brand.png'),
+};
+
 export const imageSignIn1Bg: ImageSource = {
   imageSource: require('./source/image-background-sign-in-1.jpg'),
 };

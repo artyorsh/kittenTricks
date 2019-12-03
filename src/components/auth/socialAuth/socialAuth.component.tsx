@@ -13,7 +13,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 import {
   FacebookIconFill,
   GoogleIconFill,
@@ -54,19 +53,16 @@ class SocialAuthComponent extends React.Component<SocialAuthProps> {
         {hint ? this.renderCaptionElement([componentStyle.hint, hintStyle]) : null}
         <View style={buttonContainer}>
           <SocialButton
-            activeOpacity={0.75}
             icon={GoogleIconFill}
             iconStyle={iconStyle}
             onPress={this.props.onGooglePress}
           />
           <SocialButton
-            activeOpacity={0.75}
             icon={FacebookIconFill}
             iconStyle={iconStyle}
             onPress={this.props.onFacebookPress}
           />
           <SocialButton
-            activeOpacity={0.75}
             icon={TwitterIconFill}
             iconStyle={iconStyle}
             onPress={this.props.onTwitterPress}
@@ -85,7 +81,6 @@ export const SocialAuth = withStyles(SocialAuthComponent, (theme: ThemeType) => 
   hint: {
     alignSelf: 'center',
     marginBottom: 16,
-    ...textStyle.subtitle,
   },
 }));
 

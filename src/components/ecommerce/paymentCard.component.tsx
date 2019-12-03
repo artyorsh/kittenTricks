@@ -1,9 +1,9 @@
 import React from 'react';
 import {
   ImageProps,
+  TouchableOpacity,
   View,
   ViewProps,
-  TouchableOpacity,
 } from 'react-native';
 import {
   StyleType,
@@ -14,7 +14,6 @@ import {
 import { Text } from '@kitten/ui';
 import { PaymentCard as PaymentCardModel } from '@src/core/model';
 import { MoreVerticalIconFill } from '@src/assets/icons';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   paymentCard: PaymentCardModel;
@@ -47,7 +46,7 @@ class PaymentCardComponent extends React.Component<PaymentCardProps> {
       <View style={[themedStyle.container, style]}>
         <View style={[themedStyle.topBottomContainer, themedStyle.topContainer]}>
           <Text
-            style={themedStyle.typeLabel}
+            status='control'
             category='h4'>
             {paymentCard.type}
           </Text>
@@ -59,31 +58,33 @@ class PaymentCardComponent extends React.Component<PaymentCardProps> {
           </TouchableOpacity>
         </View>
         <Text
-          style={themedStyle.numberLabel}
+          status='control'
           category='s1'>
           {paymentCard.number}
         </Text>
         <View style={themedStyle.topBottomContainer}>
           <View style={themedStyle.bottomLeftContainer}>
             <Text
-              style={themedStyle.bottomLabel}
+              status='control'
               category='c1'>
               Cardholder Name
             </Text>
             <Text
-              style={themedStyle.bottomLabelMain}
+              status='control'
               category='s1'>
               {paymentCard.cardHolder}
             </Text>
           </View>
           <View style={themedStyle.bottomRightContainer}>
             <Text
-              style={[themedStyle.bottomLabel, themedStyle.rightLabel]}
+              style={themedStyle.rightLabel}
+              status='control'
               category='c1'>
               Expire Date
             </Text>
             <Text
-              style={[themedStyle.bottomLabelMain, themedStyle.rightLabel]}>
+              style={themedStyle.rightLabel}
+              status='control'>
               {paymentCard.expireDate}
             </Text>
           </View>
@@ -107,23 +108,9 @@ export const PaymentCard = withStyles(PaymentCardComponent, (theme: ThemeType) =
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  typeLabel: {
-    color: 'white',
-    ...textStyle.headline,
-  },
   numberLabel: {
-    color: 'white',
     marginBottom: 26,
     fontSize: 18,
-    ...textStyle.headline,
-  },
-  bottomLabel: {
-    color: 'white',
-    ...textStyle.caption1,
-  },
-  bottomLabelMain: {
-    color: 'white',
-    ...textStyle.subtitle,
   },
   bottomLeftContainer: {
     justifyContent: 'flex-start',

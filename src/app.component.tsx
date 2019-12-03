@@ -1,8 +1,10 @@
 import React from 'react';
 import { ImageRequireSource } from 'react-native';
-import { mapping } from '@eva-design/eva';
+import {
+  dark,
+  mapping,
+} from '@eva-design/eva';
 import { ApplicationProvider } from '@kitten/theme';
-import { DynamicStatusBar } from '@src/components/common';
 import {
   ApplicationLoader,
   Assets,
@@ -13,15 +15,9 @@ import {
   getCurrentStateName,
   RouteState,
 } from './core/navigation/util';
-import {
-  ThemeContext,
-  ThemeContextType,
-  ThemeKey,
-  themes,
-  ThemeStore,
-} from '@src/core/themes';
 import { IconRegistry } from '@kitten/ui';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
+import { default as appTheme } from './core/themes/appTheme.json';
 
 const images: ImageRequireSource[] = [
   require('./assets/images/source/image-profile-1.jpg'),
@@ -49,15 +45,7 @@ const assets: Assets = {
   fonts: fonts,
 };
 
-interface State {
-  theme: ThemeKey;
-}
-
-export default class App extends React.Component<{}, State> {
-
-  public state: State = {
-    theme: 'Eva Light',
-  };
+export default class App extends React.Component {
 
   private onTransitionTrackError = (error: any): void => {
     console.warn('Analytics error: ', error.message);
@@ -73,29 +61,16 @@ export default class App extends React.Component<{}, State> {
     }
   };
 
-  private onSwitchTheme = (theme: ThemeKey) => {
-    ThemeStore.setTheme(theme).then(() => {
-      this.setState({ theme });
-    });
-  };
-
   public render(): React.ReactNode {
-    const contextValue: ThemeContextType = {
-      currentTheme: this.state.theme,
-      toggleTheme: this.onSwitchTheme,
-    };
-
     return (
       <ApplicationLoader assets={assets}>
         <IconRegistry icons={EvaIconsPack}/>
-        <ThemeContext.Provider value={contextValue}>
-          <ApplicationProvider
-            mapping={mapping}
-            theme={themes[this.state.theme]}>
-            <DynamicStatusBar currentTheme={this.state.theme}/>
-            <Router onNavigationStateChange={this.onNavigationStateChange}/>
-          </ApplicationProvider>
-        </ThemeContext.Provider>
+        <ApplicationProvider
+          mapping={mapping}
+          theme={{ ...dark, ...appTheme }}
+          customMapping={{ strict: { 'text-font-family': 'opensans-semibold' } }}>
+          <Router onNavigationStateChange={this.onNavigationStateChange}/>
+        </ApplicationProvider>
       </ApplicationLoader>
     );
   }

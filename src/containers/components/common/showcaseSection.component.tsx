@@ -10,7 +10,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   title: string;
@@ -60,7 +59,6 @@ export const ShowcaseSection = withStyles(ShowcaseSectionComponent, (theme: Them
   container: {},
   titleLabel: {
     marginVertical: 8,
-    ...textStyle.headline,
   },
   item: {
     marginVertical: 8,

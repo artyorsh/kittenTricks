@@ -10,7 +10,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { LayoutListItemData } from './type';
-import { textStyle } from '../style';
 
 interface ComponentProps {
   data: LayoutListItemData;
@@ -28,12 +27,10 @@ class LayoutListItemComponent extends React.Component<LayoutListItemProps> {
         {...restProps}
         style={[themedStyle.container, style]}>
         <Text
-          style={textStyle.subtitle}
           category='s1'>
           {data.title}
         </Text>
         <Text
-          style={textStyle.paragraph}
           appearance='hint'>
           {data.description}
         </Text>
@@ -52,6 +49,5 @@ export const LayoutListItem = withStyles(LayoutListItemComponent, (theme: ThemeT
   },
   description: {
     marginTop: 4,
-    ...textStyle.subtitle,
   },
 }));

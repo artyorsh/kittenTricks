@@ -11,10 +11,7 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import {
-  RateBar,
-  textStyle,
-} from '@src/components/common';
+import { RateBar } from '@src/components/common';
 import { BookCategoryList } from './bookCategoryList.component';
 
 interface ComponentProps {
@@ -43,7 +40,6 @@ class BookHeaderComponent extends React.Component<BookHeaderProps> {
         />
         <View style={themedStyle.detailsContainer}>
           <Text
-            style={themedStyle.titleLabel}
             category='s1'>
             {title}
           </Text>
@@ -85,14 +81,11 @@ export const BookHeader = withStyles(BookHeaderComponent, (theme: ThemeType) => 
     height: 180,
     borderRadius: 12,
   },
-  titleLabel: textStyle.subtitle,
   authorLabel: {
     marginTop: 4,
-    ...textStyle.caption1,
   },
   priceLabel: {
     marginTop: 16,
-    ...textStyle.subtitle,
   },
   categoryList: {
     marginVertical: 16,

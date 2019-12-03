@@ -19,7 +19,6 @@ import { ProfilePhoto } from '@src/components/social';
 import {
   ScrollableAvoidKeyboard,
   ImageOverlay,
-  textStyle,
 } from '@src/components/common';
 import {
   IconSource,
@@ -108,7 +107,6 @@ class SignUp3Component extends React.Component<SignUp3Props, State> {
           />
           <Button
             style={themedStyle.signUpButton}
-            textStyle={textStyle.button}
             size='giant'
             disabled={!this.state.formData}
             onPress={this.onSignUpButtonPress}>
@@ -116,9 +114,8 @@ class SignUp3Component extends React.Component<SignUp3Props, State> {
           </Button>
           <Button
             style={themedStyle.signInButton}
-            textStyle={themedStyle.signUpText}
             appearance='ghost'
-            activeOpacity={0.75}
+            status='control'
             onPress={this.onSignInButtonPress}>
             Already have an account? Sign In
           </Button>
@@ -164,10 +161,6 @@ export const SignUp3 = withStyles(SignUp3Component, (theme: ThemeType) => ({
   },
   signInButton: {
     marginVertical: 12,
-  },
-  signUpText: {
-    color: 'white',
-    ...textStyle.subtitle,
   },
 }));
 

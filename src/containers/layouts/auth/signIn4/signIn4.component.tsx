@@ -1,5 +1,9 @@
 import React from 'react';
-import { View } from 'react-native';
+import {
+  Image,
+  ImageBackground,
+  View,
+} from 'react-native';
 import {
   ThemedComponentProps,
   ThemeType,
@@ -14,14 +18,10 @@ import {
   SignInForm2Data,
   SocialAuth,
 } from '@src/components/auth';
+import { ScrollableAvoidKeyboard } from '@src/components/common';
 import {
-  ScrollableAvoidKeyboard,
-  ImageOverlay,
-  textStyle,
-} from '@src/components/common';
-import {
-  imageSignIn4Bg,
-  ImageSource,
+  imageBrandBg,
+  imageBrandLogo,
 } from '@src/assets/images';
 
 interface ComponentProps {
@@ -44,8 +44,6 @@ class SignIn4Component extends React.Component<SignIn4Props, State> {
   public state: State = {
     formData: undefined,
   };
-
-  private backgroundImage: ImageSource = imageSignIn4Bg;
 
   private onForgotPasswordButtonPress = () => {
     this.props.onForgotPasswordPress();
@@ -80,18 +78,15 @@ class SignIn4Component extends React.Component<SignIn4Props, State> {
 
     return (
       <ScrollableAvoidKeyboard>
-        <ImageOverlay
+        <ImageBackground
           style={themedStyle.container}
-          source={this.backgroundImage.imageSource}>
+          source={imageBrandBg.imageSource}>
           <View style={themedStyle.headerContainer}>
-            <Text
-              style={themedStyle.helloLabel}
-              category='h1'>
-              Hello
-            </Text>
-            <Text
-              style={themedStyle.signInLabel}
-              category='s1'>
+            <Image
+              style={themedStyle.headerImage}
+              source={imageBrandLogo.imageSource}
+            />
+            <Text status='control'>
               Sign in to your account
             </Text>
           </View>
@@ -102,29 +97,25 @@ class SignIn4Component extends React.Component<SignIn4Props, State> {
           />
           <Button
             style={themedStyle.signInButton}
-            textStyle={textStyle.button}
+            status='control'
             size='giant'
-            disabled={!this.state.formData}
             onPress={this.onSignInButtonPress}>
             SIGN IN
           </Button>
           <SocialAuth
             style={themedStyle.socialAuthContainer}
-            iconStyle={themedStyle.socialAuthIcon}
-            hint='Or Sign In using Social Media'
             onGooglePress={this.onGoogleButtonPress}
             onFacebookPress={this.onFacebookButtonPress}
             onTwitterPress={this.onTwitterButtonPress}
           />
           <Button
             style={themedStyle.signUpButton}
-            textStyle={themedStyle.signUpText}
             appearance='ghost'
-            activeOpacity={0.75}
+            status='control'
             onPress={this.onSignUpButtonPress}>
             Don't have an account? Sign Up
           </Button>
-        </ImageOverlay>
+        </ImageBackground>
       </ScrollableAvoidKeyboard>
     );
   }
@@ -135,9 +126,15 @@ export const SignIn4 = withStyles(SignIn4Component, (theme: ThemeType) => ({
     flex: 1,
   },
   headerContainer: {
-    minHeight: 216,
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
+    minHeight: 128,
+    marginTop: 96,
+    marginBottom: 16,
+  },
+  headerImage: {
+    width: 106,
+    height: 84,
   },
   formContainer: {
     flex: 1,
@@ -146,27 +143,11 @@ export const SignIn4 = withStyles(SignIn4Component, (theme: ThemeType) => ({
   socialAuthContainer: {
     marginTop: 32,
   },
-  helloLabel: {
-    color: 'white',
-    ...textStyle.headline,
-  },
-  signInLabel: {
-    marginTop: 16,
-    color: 'white',
-    ...textStyle.subtitle,
-  },
-  socialAuthIcon: {
-    tintColor: 'white',
-  },
   signInButton: {
     marginHorizontal: 16,
   },
   signUpButton: {
     marginVertical: 12,
-  },
-  signUpText: {
-    color: 'white',
-    ...textStyle.subtitle,
   },
 }));
 

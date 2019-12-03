@@ -1,10 +1,10 @@
 import React from 'react';
 import {
-  View,
-  TouchableOpacity,
   ImageProps,
+  View,
 } from 'react-native';
 import {
+  Button,
   ListItem,
   ListItemProps,
   ListProps,
@@ -15,10 +15,7 @@ import {
   ThemeType,
   withStyles,
 } from '@kitten/theme';
-import {
-  ActivityAuthoring,
-  textStyle,
-} from '@src/components/common';
+import { ActivityAuthoring } from '@src/components/common';
 import { MoreHorizontalIconFill } from '@src/assets/icons';
 import { Comment as CommentModel } from '@src/core/model';
 import { CommentList2 } from '../commentList2';
@@ -101,19 +98,18 @@ class CommentList1ItemComponent extends React.Component<CommentList1ItemProps, S
             name={`${comment.author.firstName} ${comment.author.lastName}`}
             date={comment.date}
           />
-          <TouchableOpacity
-            activeOpacity={0.75}
-            onPress={this.onMorePress}>
-            {this.renderMoreIcon()}
-          </TouchableOpacity>
+          <Button
+            appearance='ghost'
+            status='control'
+            icon={MoreHorizontalIconFill}
+          />
         </View>
         <Text
-          style={themedStyle.commentLabel}
+          style={{ marginVertical: 24 }}
           category='s1'>
           {comment.text}
         </Text>
         <ArticleActivityBar
-          style={themedStyle.activityContainer}
           comments={comment.comments ? comment.comments.length : 0}
           likes={comment.likesCount}
           onCommentPress={this.onCommentPress}
@@ -135,9 +131,6 @@ export const CommentList1Item = withStyles(CommentList1ItemComponent, (theme: Th
     flexDirection: 'row',
     alignItems: 'center',
   },
-  activityContainer: {
-    marginTop: 24,
-  },
   activityAuthoring: {
     flex: 1,
   },
@@ -145,7 +138,6 @@ export const CommentList1Item = withStyles(CommentList1ItemComponent, (theme: Th
     marginLeft: 8,
     marginRight: 32,
     marginTop: 14,
-    ...textStyle.paragraph,
   },
   moreIcon: {
     width: 18,

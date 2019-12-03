@@ -10,10 +10,10 @@ const Config = require('./config');
 const moduleResolverConfig = {
   root: path.resolve('./'),
   alias: {
-    '@kitten/theme': path.resolve(Config.KITTEN_PATH, 'theme'),
-    '@kitten/ui': path.resolve(Config.KITTEN_PATH, 'ui'),
-    '@eva-design/eva': path.resolve(Config.MAPPING_PATH),
-    '@eva-design/processor': path.resolve(Config.PROCESSOR_PATH),
+    '@kitten/theme': path.resolve(Config.UI_KITTEN_PATH, 'theme'),
+    '@kitten/ui': path.resolve(Config.UI_KITTEN_PATH, 'ui'),
+    '@eva-design/eva': path.resolve(Config.EVA_PATH, 'eva'),
+    '@eva-design/processor': path.resolve(Config.EVA_PATH, 'processor'),
   },
 };
 

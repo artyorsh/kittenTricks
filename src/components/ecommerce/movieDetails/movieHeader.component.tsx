@@ -11,10 +11,7 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import {
-  RateBar,
-  textStyle,
-} from '@src/components/common';
+import { RateBar } from '@src/components/common';
 import { MovieCategoryList } from './movieCategoryList.component';
 
 interface ComponentProps {
@@ -79,11 +76,9 @@ export const MovieHeader = withStyles(MovieHeaderComponent, (theme: ThemeType) =
   },
   titleLabel: {
     textAlign: 'center',
-    ...textStyle.headline,
   },
   descriptionLabel: {
     marginTop: 8,
     marginBottom: 16,
-    ...textStyle.paragraph,
   },
 }));

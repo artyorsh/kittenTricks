@@ -8,10 +8,7 @@ import {
   ThemeType,
   withStyles,
 } from '@kitten/theme';
-import {
-  textStyle,
-  ValidationInput,
-} from '@src/components/common';
+import { ValidationInput } from '@src/components/common';
 import {
   PhoneNumberValidator,
   SMSCodeValidator,
@@ -86,7 +83,6 @@ class SignInForm4Component extends React.Component<SignInForm4Props, State> {
         style={[themedStyle.container, style]}>
         <ValidationInput
           style={themedStyle.phoneInput}
-          textStyle={textStyle.paragraph}
           placeholder='Phone Number'
           icon={PhoneIconFill}
           validator={PhoneNumberValidator}
@@ -94,7 +90,6 @@ class SignInForm4Component extends React.Component<SignInForm4Props, State> {
         />
         <ValidationInput
           style={themedStyle.codeInput}
-          textStyle={textStyle.paragraph}
           placeholder='SMS Code'
           secureTextEntry={true}
           icon={LockIconFill}

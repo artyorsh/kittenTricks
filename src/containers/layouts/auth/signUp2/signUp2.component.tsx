@@ -16,12 +16,8 @@ import {
   SignUpForm2Data,
 } from '@src/components/auth';
 import { ProfilePhoto } from '@src/components/social';
-import {
-  ScrollableAvoidKeyboard,
-  textStyle,
-} from '@src/components/common';
+import { ScrollableAvoidKeyboard } from '@src/components/common';
 import { PlusIconFill } from '@src/assets/icons';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 interface ComponentProps {
   onSignUpPress: (formData: SignUpForm2Data) => void;
@@ -95,7 +91,6 @@ class SignUp2Component extends React.Component<SignUp2Props, State> {
         />
         <Button
           style={themedStyle.signUpButton}
-          textStyle={textStyle.button}
           size='giant'
           disabled={!this.state.formData}
           onPress={this.onSignUpButtonPress}>
@@ -103,9 +98,8 @@ class SignUp2Component extends React.Component<SignUp2Props, State> {
         </Button>
         <Button
           style={themedStyle.signInButton}
-          textStyle={themedStyle.signInText}
           appearance='ghost'
-          activeOpacity={0.75}
+          status='basic'
           onPress={this.onSignInButtonPress}>
           Already have an account? Sign In
         </Button>
@@ -156,10 +150,6 @@ export const SignUp2 = withStyles(SignUp2Component, (theme: ThemeType) => ({
   },
   signInButton: {
     marginVertical: 12,
-  },
-  signInText: {
-    color: theme['text-hint-color'],
-    ...textStyle.subtitle,
   },
 }));
 

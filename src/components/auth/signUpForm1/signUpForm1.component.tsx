@@ -9,10 +9,7 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { CheckBox } from '@kitten/ui';
-import {
-  textStyle,
-  ValidationInput,
-} from '@src/components/common';
+import { ValidationInput } from '@src/components/common';
 import {
   DOBValidator,
   EmailValidator,
@@ -126,8 +123,6 @@ class SignUpForm1Component extends React.Component<SignUpForm1Props, State> {
         />
         <ValidationInput
           style={themedStyle.input}
-          textStyle={textStyle.paragraph}
-          labelStyle={textStyle.label}
           placeholder='Watsan'
           label='LAST NAME'
           autoCapitalize='words'
@@ -136,8 +131,6 @@ class SignUpForm1Component extends React.Component<SignUpForm1Props, State> {
         />
         <ValidationInput
           style={themedStyle.input}
-          textStyle={textStyle.paragraph}
-          labelStyle={textStyle.label}
           placeholder='18/10/1995'
           label='DATE OF BIRTHDAY'
           validator={DOBValidator}
@@ -154,9 +147,6 @@ class SignUpForm1Component extends React.Component<SignUpForm1Props, State> {
         />
         <ValidationInput
           style={themedStyle.input}
-          textStyle={textStyle.paragraph}
-          labelStyle={textStyle.label}
-          captionTextStyle={textStyle.paragraph}
           label='PASSWORD'
           placeholder='Password'
           caption={this.passwordCaption()}
@@ -166,7 +156,6 @@ class SignUpForm1Component extends React.Component<SignUpForm1Props, State> {
         />
         <CheckBox
           style={themedStyle.termsCheckBox}
-          textStyle={themedStyle.termsCheckBoxText}
           checked={this.state.termsAccepted}
           text={'By creating an account, I agree to the Ewa Terms of\nUse and Privacy Policy'}
           onChange={this.onTermsAcceptChange}
@@ -186,10 +175,5 @@ export const SignUpForm1 = withStyles(SignUpForm1Component, (theme: ThemeType) =
   },
   termsCheckBox: {
     marginTop: 20,
-  },
-  termsCheckBoxText: {
-    fontSize: 11,
-    color: theme['text-hint-color'],
-    ...textStyle.paragraph,
   },
 }));

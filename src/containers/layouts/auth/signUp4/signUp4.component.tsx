@@ -1,34 +1,27 @@
 import React from 'react';
 import {
-  ButtonProps,
-  ImageProps,
+  Image,
+  ImageBackground,
   View,
 } from 'react-native';
 import {
-  StyleType,
   ThemedComponentProps,
   ThemeType,
   withStyles,
 } from '@kitten/theme';
-import { Button } from '@kitten/ui';
+import {
+  Button,
+  Text,
+} from '@kitten/ui';
 import {
   SignUpForm2,
   SignUpForm2Data,
   SocialAuth,
 } from '@src/components/auth';
-import { ProfilePhoto } from '@src/components/social';
+import { ScrollableAvoidKeyboard } from '@src/components/common';
 import {
-  ImageOverlay,
-  ScrollableAvoidKeyboard,
-  textStyle,
-} from '@src/components/common';
-import {
-  IconSource,
-  PlusIconFill,
-} from '@src/assets/icons';
-import {
-  imageSignUp4Bg,
-  ImageSource,
+  imageBrandBg,
+  imageBrandLogo,
 } from '@src/assets/images';
 
 interface ComponentProps {
@@ -51,9 +44,6 @@ class SignUp4Component extends React.Component<SignUp4Props, State> {
   public state: State = {
     formData: undefined,
   };
-
-  private backgroundImage: ImageSource = imageSignUp4Bg;
-  private profileImage: IconSource = require('../../../../assets/icons/icon-person.png');
 
   private onFormDataChange = (formData: SignUpForm2Data) => {
     this.setState({ formData });
@@ -79,45 +69,22 @@ class SignUp4Component extends React.Component<SignUp4Props, State> {
     this.props.onTwitterPress();
   };
 
-  private onPhotoButtonPress = () => {
-    this.props.onPhotoPress();
-  };
-
-  private renderPhotoButtonIcon = (style: StyleType): React.ReactElement<ImageProps> => {
-    const { themedStyle } = this.props;
-
-    return PlusIconFill({ ...style, ...themedStyle.photoButtonIcon });
-  };
-
-  private renderPhotoButton = (): React.ReactElement<ButtonProps> => {
-    const { themedStyle } = this.props;
-
-    return (
-      <Button
-        style={themedStyle.photoButton}
-        textStyle={textStyle.button}
-        size='small'
-        icon={this.renderPhotoButtonIcon}
-        onPress={this.onPhotoButtonPress}
-      />
-    );
-  };
-
   public render(): React.ReactNode {
     const { themedStyle } = this.props;
 
     return (
       <ScrollableAvoidKeyboard>
-        <ImageOverlay
+        <ImageBackground
           style={themedStyle.container}
-          source={this.backgroundImage.imageSource}>
+          source={imageBrandBg.imageSource}>
           <View style={themedStyle.headerContainer}>
-            <ProfilePhoto
-              style={themedStyle.photo}
-              resizeMode='center'
-              source={this.profileImage.imageSource}
-              button={this.renderPhotoButton}
+            <Image
+              style={themedStyle.headerImage}
+              source={imageBrandLogo.imageSource}
             />
+            <Text status='control'>
+              Sign in to your account
+            </Text>
           </View>
           <SignUpForm2
             style={themedStyle.formContainer}
@@ -125,28 +92,25 @@ class SignUp4Component extends React.Component<SignUp4Props, State> {
           />
           <Button
             style={themedStyle.signUpButton}
-            textStyle={textStyle.button}
+            status='control'
             size='giant'
-            disabled={!this.state.formData}
             onPress={this.onSignUpButtonPress}>
             SIGN UP
           </Button>
           <SocialAuth
-            iconStyle={themedStyle.socialAuthIcon}
-            hint='Or Sign In using Social Media'
             onGooglePress={this.onGoogleButtonPress}
             onFacebookPress={this.onFacebookButtonPress}
             onTwitterPress={this.onTwitterButtonPress}
           />
           <Button
             style={themedStyle.signInButton}
-            textStyle={themedStyle.signUpText}
             appearance='ghost'
+            status='control'
             activeOpacity={0.75}
             onPress={this.onSignInButtonPress}>
             Already have account? Sign In
           </Button>
-        </ImageOverlay>
+        </ImageBackground>
       </ScrollableAvoidKeyboard>
     );
   }
@@ -157,34 +121,19 @@ export const SignUp4 = withStyles(SignUp4Component, (theme: ThemeType) => ({
     flex: 1,
   },
   headerContainer: {
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    minHeight: 160,
+    minHeight: 128,
+    marginTop: 96,
+    marginBottom: 16,
+  },
+  headerImage: {
+    width: 106,
+    height: 84,
   },
   formContainer: {
     flex: 1,
     paddingHorizontal: 16,
-  },
-  photo: {
-    width: 92,
-    height: 92,
-    borderRadius: 46,
-    alignSelf: 'center',
-    backgroundColor: theme['background-basic-color-1'],
-    tintColor: theme['text-hint-color'],
-  },
-  photoButton: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
-    transform: [{ translateY: 64 }],
-  },
-  photoButtonIcon: {
-    width: 20,
-    height: 20,
-  },
-  socialAuthIcon: {
-    tintColor: 'white',
   },
   signUpButton: {
     marginVertical: 16,
@@ -192,10 +141,6 @@ export const SignUp4 = withStyles(SignUp4Component, (theme: ThemeType) => ({
   },
   signInButton: {
     marginVertical: 12,
-  },
-  signUpText: {
-    color: 'white',
-    ...textStyle.subtitle,
   },
 }));
 

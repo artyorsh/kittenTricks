@@ -11,10 +11,7 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import {
-  Chips,
-  textStyle,
-} from '@src/components/common';
+import { Chips } from '@src/components/common';
 import { ClockIconOutline } from '@src/assets/icons';
 
 interface ComponentProps {
@@ -49,7 +46,7 @@ class StyxComponent extends React.Component<StyxProps> {
           style={themedStyle.chips}
           icon={ClockIconOutline}>
           <Text
-            style={themedStyle.chipsText}
+            status='control'
             category='c2'>
             {value}
           </Text>
@@ -70,14 +67,9 @@ export const Styx = withStyles(StyxComponent, (theme: ThemeType) => ({
   hintLabel: {
     marginHorizontal: 16,
     marginVertical: 14,
-    ...textStyle.headline,
   },
   chips: {
     width: 80,
-  },
-  chipsText: {
-    color: 'white',
-    ...textStyle.caption2,
   },
 }));
 

@@ -22,7 +22,6 @@ import {
   List,
   Text,
 } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   exercises: Exercise[];
@@ -151,7 +150,6 @@ export const Easy1 = withStyles(Easy1Component, (theme: ThemeType) => ({
   },
   pagerLabel: {
     marginVertical: 16,
-    ...textStyle.paragraph,
   },
   pagerCard: {
     width: 226,

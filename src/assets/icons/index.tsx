@@ -379,9 +379,9 @@ export const ArrowHeadUpIconFill = (style: ImageStyle): IconElement<ImageProps> 
   );
 };
 
-export const ArrowIosBackFill = (style: ImageStyle): IconElement<ImageProps> => {
+export const ArrowBackFill = (style: ImageStyle): IconElement<ImageProps> => {
   return (
-    <Icon {...style} name='arrow-ios-back'/>
+    <Icon {...style} name='arrow-back'/>
   );
 };
 

@@ -11,7 +11,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   hint: string;
@@ -65,10 +64,8 @@ export const ProfileParameterCard = withStyles(ProfileParameterCardComponent, (t
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  hintLabel: textStyle.caption2,
   valueLabel: {
     marginTop: 20,
-    ...textStyle.headline,
   },
   icon: {
     width: 20,

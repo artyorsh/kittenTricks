@@ -8,7 +8,7 @@ import {
 } from '@kitten/ui';
 import {
   StarIconFill,
-  ArrowIosBackFill,
+  ArrowBackFill,
   MoreVerticalIconFill,
 } from '@src/assets/icons';
 
@@ -30,7 +30,7 @@ export const CenterTopNavigation = (props?: TopNavigationProps): TopNavigationEl
 
 const renderLeftControl = (): TopNavigationActionElement => {
   return (
-    <TopNavigationAction icon={ArrowIosBackFill} />
+    <TopNavigationAction icon={ArrowBackFill} />
   );
 };
 

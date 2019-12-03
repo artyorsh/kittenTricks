@@ -13,7 +13,6 @@ import {
   Text,
   Avatar,
 } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 import { Profile } from '@src/core/model';
 
 interface ComponentProps {
@@ -49,8 +48,7 @@ class PopoverContentComponent extends React.Component<PopoverContentProps> {
           />
           <View>
             <Text
-              category='s2'
-              style={themedStyle.nameLabel}>
+              category='s2'>
               {name}
             </Text>
             <Text
@@ -81,9 +79,6 @@ export const PopoverContent = withStyles(PopoverContentComponent, (theme: ThemeT
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 14,
-  },
-  nameLabel: {
-    ...textStyle.subtitle,
   },
   button: {
     alignSelf: 'center',

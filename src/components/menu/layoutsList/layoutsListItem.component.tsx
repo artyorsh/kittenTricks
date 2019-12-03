@@ -11,7 +11,6 @@ import {
   ListItemProps,
   Text,
 } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 import { LayoutsListItemData } from './type';
 import {
   ThemeContext,
@@ -67,6 +66,5 @@ export const LayoutsListItem = withStyles(LayoutsListItemComponent, (theme: Them
   },
   title: {
     marginTop: 8,
-    ...textStyle.subtitle,
   },
 }));

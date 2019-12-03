@@ -9,10 +9,7 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Button } from '@kitten/ui';
-import {
-  textStyle,
-  ValidationInput,
-} from '@src/components/common';
+import { ValidationInput } from '@src/components/common';
 import {
   EyeOffIconFill,
   PersonIconFill,
@@ -92,7 +89,8 @@ class SignInForm2Component extends React.Component<SignInForm2Props, State> {
         {...restProps}>
         <View style={themedStyle.formContainer}>
           <ValidationInput
-            textStyle={textStyle.paragraph}
+            status='control'
+            size='large'
             placeholder='User Name'
             icon={PersonIconFill}
             validator={NameValidator}
@@ -100,7 +98,8 @@ class SignInForm2Component extends React.Component<SignInForm2Props, State> {
           />
           <ValidationInput
             style={themedStyle.passwordInput}
-            textStyle={textStyle.paragraph}
+            status='control'
+            size='large'
             placeholder='Password'
             icon={EyeOffIconFill}
             secureTextEntry={true}
@@ -110,9 +109,8 @@ class SignInForm2Component extends React.Component<SignInForm2Props, State> {
           <View style={themedStyle.forgotPasswordContainer}>
             <Button
               style={themedStyle.forgotPasswordButton}
-              textStyle={themedStyle.forgotPasswordText}
               appearance='ghost'
-              activeOpacity={0.75}
+              status='control'
               onPress={this.onForgotPasswordButtonPress}>
               Forgot your password?
             </Button>
@@ -134,10 +132,5 @@ export const SignInForm2 = withStyles(SignInForm2Component, (theme: ThemeType) =
   },
   forgotPasswordButton: {
     paddingHorizontal: 0,
-  },
-  forgotPasswordText: {
-    fontSize: 15,
-    color: theme['text-hint-color'],
-    ...textStyle.subtitle,
   },
 }));

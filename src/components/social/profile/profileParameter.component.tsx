@@ -11,7 +11,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   hint: string;
@@ -32,12 +31,13 @@ class ProfileParameterComponent extends React.Component<ProfileParameterProps> {
         style={[themedStyle.container, style]}
         {...restProps}>
         <Text
-          style={themedStyle.valueLabel}
-          category='h6'>
+          category='h6'
+          status='control'>
           {value}
         </Text>
         <Text
-          style={themedStyle.hintLabel}>
+          style={themedStyle.hintLabel}
+          status='control'>
           {hint}
         </Text>
       </View>
@@ -48,13 +48,5 @@ class ProfileParameterComponent extends React.Component<ProfileParameterProps> {
 export const ProfileParameter = withStyles(ProfileParameterComponent, (theme: ThemeType) => ({
   container: {
     alignItems: 'center',
-  },
-  valueLabel: {
-    color: 'white',
-    ...textStyle.headline,
-  },
-  hintLabel: {
-    color: 'white',
-    ...textStyle.subtitle,
   },
 }));

@@ -16,10 +16,7 @@ import {
   FeedActivityBar,
   Styx,
 } from '@src/components/social';
-import {
-  ImageOverlay,
-  textStyle,
-} from '@src/components/common';
+import { ImageOverlay } from '@src/components/common';
 
 interface ListDerivedProps {
   index?: number;
@@ -92,13 +89,13 @@ class Feed1ListItemComponent extends React.Component<Feed1ListItemProps> {
                 source={icon}
               />
               <Text
-                style={themedStyle.categoryLabel}
+                status='control'
                 category='h6'>
                 {category}
               </Text>
             </View>
             <Text
-              style={themedStyle.timeLabel}>
+              status='control'>
               {time}
             </Text>
           </View>
@@ -157,16 +154,9 @@ export const Feed1ListItem = withStyles(Feed1ListItemComponent, (theme: ThemeTyp
   },
   categoryLabel: {
     marginHorizontal: 8,
-    color: 'white',
-    ...textStyle.headline,
-  },
-  timeLabel: {
-    color: 'white',
-    ...textStyle.subtitle,
   },
   descriptionLabel: {
     marginTop: 16,
-    ...textStyle.subtitle,
   },
 }));
 

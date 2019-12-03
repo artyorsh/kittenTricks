@@ -30,7 +30,6 @@ import {
   MapIconFill,
   PeopleIconFill,
 } from '@src/assets/icons';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   galleryFiles: MediaLibrary.Asset[];
@@ -129,7 +128,6 @@ class Chat2FileSectionComponent extends React.Component<Chat2FileSectionComponen
           style={themedStyle.cameraView}>
           <View style={themedStyle.cameraContentContainer}>
             <Button
-              textStyle={textStyle.button}
               appearance='ghost'
               icon={this.renderPhotoItemIcon}
               onPress={this.onTakePhotoPress}
@@ -191,7 +189,6 @@ class Chat2FileSectionComponent extends React.Component<Chat2FileSectionComponen
         style={themedStyle.actionItemContainer}
         onPress={this.onAddActionItemPress}>
         <Text
-          style={themedStyle.addActionLabel}
           category='s2'>
           {item.title}
         </Text>
@@ -215,7 +212,6 @@ class Chat2FileSectionComponent extends React.Component<Chat2FileSectionComponen
         {this.renderAddActions()}
         <Button
           style={themedStyle.cancelButton}
-          textStyle={textStyle.button}
           appearance='ghost'
           onPress={this.onCancelPress}>
           Cancel
@@ -271,7 +267,6 @@ export const Chat2FileSection = withStyles(Chat2FileSectionComponent, (theme: Th
     borderBottomWidth: 1,
     borderBottomColor: theme['border-basic-color-2'],
   },
-  addActionLabel: textStyle.subtitle,
   cancelButton: {
     fontSize: 18,
     fontWeight: 'bold',

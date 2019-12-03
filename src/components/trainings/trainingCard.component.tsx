@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  View,
   TouchableOpacity,
   TouchableOpacityProps,
+  View,
 } from 'react-native';
 import {
   ThemedComponentProps,
@@ -13,7 +13,6 @@ import { Text } from '@kitten/ui';
 import {
   Chips,
   ImageOverlay,
-  textStyle,
 } from '@src/components/common';
 import { ClockIconOutline } from '@src/assets/icons';
 import { Exercise } from '@src/core/model';
@@ -44,12 +43,12 @@ class TrainingCardComponent extends React.Component<TrainingCardProps> {
           source={training.image.imageSource}>
           <View>
             <Text
-              style={themedStyle.levelLabel}
-            appearance='hint'>
+              status='control'
+              appearance='hint'>
               {`${training.level} Level`}
             </Text>
             <Text
-              style={themedStyle.titleLabel}
+              status='control'
               category='h5'>
               {training.name}
             </Text>
@@ -58,7 +57,7 @@ class TrainingCardComponent extends React.Component<TrainingCardProps> {
             style={themedStyle.chips}
             icon={ClockIconOutline}>
             <Text
-              style={themedStyle.chipsText}
+              status='control'
               category='c2'>
               {training.duration}
             </Text>
@@ -77,19 +76,7 @@ export const TrainingCard1 = withStyles(TrainingCardComponent, (theme: ThemeType
     justifyContent: 'space-between',
     overflow: 'hidden',
   },
-  levelLabel: {
-    color: 'white',
-    ...textStyle.subtitle,
-  },
-  titleLabel: {
-    color: 'white',
-    ...textStyle.headline,
-  },
   chips: {
     width: 80,
-  },
-  chipsText: {
-    color: 'white',
-    ...textStyle.caption2,
   },
 }));

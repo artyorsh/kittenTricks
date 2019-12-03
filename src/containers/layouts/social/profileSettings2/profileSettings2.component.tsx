@@ -18,10 +18,7 @@ import {
 } from '@src/components/social';
 import { CameraIconFill } from '@src/assets/icons';
 import { Profile } from '@src/core/model';
-import {
-  ContainerView,
-  textStyle,
-} from '@src/components/common';
+import { ContainerView } from '@src/components/common';
 
 interface ComponentProps {
   profile: Profile;
@@ -114,7 +111,6 @@ class ProfileSettings2Component extends React.Component<ProfileSettings2Props> {
         </View>
         <Button
           style={themedStyle.button}
-          textStyle={textStyle.button}
           size='large'
           onPress={this.onButtonPress}>
           DONE
@@ -161,7 +157,6 @@ export const ProfileSettings2 = withStyles(ProfileSettings2Component, (theme: Th
   },
   description: {
     marginTop: 24,
-    ...textStyle.paragraph,
   },
   photo: {
     width: 76,

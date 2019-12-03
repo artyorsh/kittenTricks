@@ -13,10 +13,7 @@ import {
   Button,
   Text,
 } from '@kitten/ui';
-import {
-  ContainerView,
-  textStyle,
-} from '@src/components/common';
+import { ContainerView } from '@src/components/common';
 import { CartProduct as CartProductModel } from './cartProduct.model';
 import {
   CartProduct,
@@ -95,7 +92,6 @@ class ShoppingCartComponent extends React.Component<ShoppingCartProps> {
           />
           <View style={themedStyle.totalCostContainer}>
             <Text
-              style={themedStyle.totalCostLabel}
               category='h6'>
               Total Cost:
             </Text>
@@ -107,7 +103,6 @@ class ShoppingCartComponent extends React.Component<ShoppingCartProps> {
         </View>
         <Button
           style={themedStyle.checkoutButton}
-          textStyle={textStyle.button}
           size='giant'
           onPress={this.onCheckout}>
           CHECKOUT
@@ -138,9 +133,7 @@ export const ShoppingCart = withStyles(ShoppingCartComponent, (theme: ThemeType)
     borderBottomWidth: 1,
     borderBottomColor: theme['border-basic-color-2'],
   },
-  totalCostLabel: textStyle.headline,
   totalPriceLabel: {
-    fontFamily: 'opensans-bold',
     fontSize: 22,
     lineHeight: 32,
   },

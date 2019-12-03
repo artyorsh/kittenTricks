@@ -12,7 +12,6 @@ import {
 import {
   ActivityAuthoring,
   ContainerView,
-  textStyle,
 } from '@src/components/common';
 import { Article } from '@src/core/model';
 
@@ -80,10 +79,9 @@ export const Article1 = withStyles(Article1Component, (theme: ThemeType) => ({
     borderTopColor: theme['border-basic-color-2'],
   },
   contentLabel: {
+    flex: 1,
     marginHorizontal: 24,
     marginVertical: 24,
-    flex: 1,
-    ...textStyle.paragraph,
   },
 }));
 

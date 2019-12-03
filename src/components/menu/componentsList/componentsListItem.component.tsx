@@ -11,7 +11,6 @@ import {
   ListItemProps,
   Text,
 } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 import {
   ThemeContext,
   ThemeKey,
@@ -44,7 +43,6 @@ class ComponentsListItemComponent extends React.Component<ComponentsListItemProp
           style={[themedStyle.container, style]}>
           {this.renderShowcaseElement(themedStyle.icon, currentTheme)}
           <Text
-            style={textStyle.subtitle}
             category='s2'>
             {data.title}
           </Text>

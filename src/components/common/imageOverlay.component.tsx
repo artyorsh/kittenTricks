@@ -52,7 +52,7 @@ class ImageOverlayComponent extends React.Component<ImageOverlayProps> {
 
 export const ImageOverlay = withStyles(ImageOverlayComponent, (theme: ThemeType) => ({
   overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.45)',
+    backgroundColor: 'rgba(14, 21, 73, 0.75)',
     ...StyleSheet.absoluteFillObject,
   },
 }));

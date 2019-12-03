@@ -7,7 +7,6 @@ import {
   Text,
   TextProps,
 } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 
 const { width } = Dimensions.get('window');
 
@@ -16,7 +15,7 @@ type TextElement = React.ReactElement<TextProps>;
 export const H2Text = (): TextElement => {
   return (
     <Text
-      style={[textStyle.headline, styles.text]}
+      style={styles.text}
       category='h2'>
       Sample Text
     </Text>

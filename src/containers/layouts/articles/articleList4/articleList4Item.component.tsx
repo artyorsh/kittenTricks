@@ -13,7 +13,6 @@ import {
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
 import { ArticleActivityBar } from '@src/components/articles';
-import { textStyle } from '@src/components/common';
 
 interface ListDerivedProps {
   index?: number;
@@ -98,7 +97,6 @@ export const ArticleList4Item = withStyles(ArticleList4ItemComponent, (theme: Th
   },
   titleLabel: {
     flex: 1,
-    ...textStyle.headline,
   },
 }));
 

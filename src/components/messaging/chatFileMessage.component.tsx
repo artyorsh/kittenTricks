@@ -21,7 +21,6 @@ import {
   getContentAlignment,
 } from './type';
 import { getFileComponent } from './file.component';
-import { textStyle } from '@src/components/common';
 
 interface FileComponentProps {
   appearance: ChatFileMessageAppearance;
@@ -56,7 +55,6 @@ class ChatFileMessageComponent extends React.Component<ChatFileMessageProps> {
         message={message}>
         <Text
           style={themedStyle.fileNameLabel}
-          appearance='alternative'
           category='c1'>
           {message.file.name}
         </Text>
@@ -111,11 +109,8 @@ class ChatFileMessageComponent extends React.Component<ChatFileMessageProps> {
 export const ChatFileMessage = withStyles(ChatFileMessageComponent, (theme: ThemeType) => ({
   dateLabel: {
     marginHorizontal: 26,
-    ...textStyle.caption1,
   },
   fileNameLabel: {
-    color: 'white',
-    marginRight: 16,
-    ...textStyle.caption1,
+    marginHorizontal: 16,
   },
 }));

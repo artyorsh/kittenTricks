@@ -9,10 +9,7 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { CheckBox } from '@kitten/ui';
-import {
-  textStyle,
-  ValidationInput,
-} from '@src/components/common';
+import { ValidationInput } from '@src/components/common';
 import {
   EmailIconFill,
   EyeOffIconFill,
@@ -109,7 +106,8 @@ class SignUpForm2Component extends React.Component<SignUpForm2Props, State> {
         <View style={themedStyle.formContainer}>
           <ValidationInput
             style={themedStyle.usernameInput}
-            textStyle={textStyle.paragraph}
+            size='large'
+            status='control'
             autoCapitalize='none'
             placeholder='User Name'
             icon={PersonIconFill}
@@ -118,7 +116,8 @@ class SignUpForm2Component extends React.Component<SignUpForm2Props, State> {
           />
           <ValidationInput
             style={themedStyle.emailInput}
-            textStyle={textStyle.paragraph}
+            size='large'
+            status='control'
             autoCapitalize='none'
             placeholder='Email'
             icon={EmailIconFill}
@@ -127,7 +126,8 @@ class SignUpForm2Component extends React.Component<SignUpForm2Props, State> {
           />
           <ValidationInput
             style={themedStyle.passwordInput}
-            textStyle={textStyle.paragraph}
+            size='large'
+            status='control'
             autoCapitalize='none'
             secureTextEntry={true}
             placeholder='Password'
@@ -137,7 +137,7 @@ class SignUpForm2Component extends React.Component<SignUpForm2Props, State> {
           />
           <CheckBox
             style={themedStyle.termsCheckBox}
-            textStyle={themedStyle.termsCheckBoxText}
+            status='control'
             checked={this.state.termsAccepted}
             onChange={this.onTermsValueChange}
             text='I read and agree to Terms & Conditions'
@@ -163,9 +163,5 @@ export const SignUpForm2 = withStyles(SignUpForm2Component, (theme: ThemeType) =
   },
   termsCheckBox: {
     marginTop: 24,
-  },
-  termsCheckBoxText: {
-    color: theme['text-hint-color'],
-    ...textStyle.subtitle,
   },
 }));

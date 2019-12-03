@@ -14,9 +14,8 @@ import {
   SignInForm2Data,
 } from '@src/components/auth';
 import {
-  ScrollableAvoidKeyboard,
   ImageOverlay,
-  textStyle,
+  ScrollableAvoidKeyboard,
 } from '@src/components/common';
 import {
   imageSignIn3Bg,
@@ -69,13 +68,14 @@ class SignIn3Component extends React.Component<SignIn3Props, State> {
           source={this.backgroundImage.imageSource}>
           <View style={themedStyle.headerContainer}>
             <Text
-              style={themedStyle.helloLabel}
+              status='control'
               category='h1'>
               Hello
             </Text>
             <Text
               style={themedStyle.signInLabel}
-              category='s1'>
+              category='s1'
+              status='control'>
               Sign in to your account
             </Text>
           </View>
@@ -86,7 +86,6 @@ class SignIn3Component extends React.Component<SignIn3Props, State> {
           />
           <Button
             style={themedStyle.signInButton}
-            textStyle={textStyle.button}
             size='giant'
             disabled={!this.state.formData}
             onPress={this.onSignInButtonPress}>
@@ -94,9 +93,8 @@ class SignIn3Component extends React.Component<SignIn3Props, State> {
           </Button>
           <Button
             style={themedStyle.signUpButton}
-            textStyle={themedStyle.signUpText}
             appearance='ghost'
-            activeOpacity={0.75}
+            status='control'
             onPress={this.onSignUpButtonPress}>
             Don't have an account? Sign Up
           </Button>
@@ -120,24 +118,14 @@ export const SignIn3 = withStyles(SignIn3Component, (theme: ThemeType) => ({
     justifyContent: 'space-between',
     paddingHorizontal: 16,
   },
-  helloLabel: {
-    color: 'white',
-    ...textStyle.headline,
-  },
   signInLabel: {
     marginTop: 16,
-    color: 'white',
-    ...textStyle.subtitle,
   },
   signInButton: {
     marginHorizontal: 16,
   },
   signUpButton: {
     marginVertical: 12,
-  },
-  signUpText: {
-    color: 'white',
-    ...textStyle.subtitle,
   },
 }));
 

@@ -60,9 +60,6 @@ export {
   LayoutMenuItemData,
 } from './layoutMenu';
 export {
-  textStyle,
-} from './style';
-export {
   DynamicStatusBar,
   DynamicStatusBarProps,
 } from './dynamicStatusBar.component';

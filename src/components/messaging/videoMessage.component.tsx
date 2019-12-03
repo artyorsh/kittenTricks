@@ -51,7 +51,7 @@ export const VideoMessage = withStyles(VideoMessageComponent, (theme: ThemeType)
   fullMessageImage: {
     width: 64,
     height: 64,
-    borderRadius: 20,
+    borderRadius: 4,
   },
   fullMessageVideo: {
     width: 64,
@@ -60,7 +60,7 @@ export const VideoMessage = withStyles(VideoMessageComponent, (theme: ThemeType)
     alignItems: 'center',
   },
   fullMessageVideoPreview: {
-    borderRadius: 20,
+    borderRadius: 4,
   },
   preViewAppearanceImage: {
     width: 124,

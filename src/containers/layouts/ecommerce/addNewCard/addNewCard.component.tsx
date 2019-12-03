@@ -9,10 +9,7 @@ import {
   AddPaymentCardForm,
   AddPaymentCardFormType,
 } from '@src/components/ecommerce';
-import {
-  ContainerView,
-  textStyle,
-} from '@src/components/common';
+import { ContainerView } from '@src/components/common';
 
 interface ComponentProps {
   onAddPress: (value: AddPaymentCardFormType) => void;
@@ -51,7 +48,6 @@ class AddNewCardComponent extends React.Component<AddNewCardProps, State> {
         />
         <Button
           style={themedStyle.addButton}
-          textStyle={textStyle.button}
           size='giant'
           disabled={!this.state.formValue}
           onPress={this.onAddButtonPress}>

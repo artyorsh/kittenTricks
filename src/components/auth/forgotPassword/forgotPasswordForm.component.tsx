@@ -8,10 +8,7 @@ import {
   ThemeType,
   withStyles,
 } from '@kitten/theme';
-import {
-  textStyle,
-  ValidationInput,
-} from '@src/components/common';
+import { ValidationInput } from '@src/components/common';
 import { EmailIconFill } from '@src/assets/icons';
 import { EmailValidator } from '@src/core/validators';
 import { ForgotPasswordFormData } from './type';
@@ -74,8 +71,9 @@ class ForgotPasswordFormComponent extends React.Component<ForgotPasswordFormProp
         style={[themedStyle.container, style]}
         {...restProps}>
         <ValidationInput
-          textStyle={textStyle.paragraph}
           placeholder='Email'
+          status='control'
+          size='large'
           icon={EmailIconFill}
           validator={EmailValidator}
           onChangeText={this.onEmailInputTextChange}

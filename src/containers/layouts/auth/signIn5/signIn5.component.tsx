@@ -18,9 +18,8 @@ import {
   SignInForm4Data,
 } from '@src/components/auth';
 import {
-  ScrollableAvoidKeyboard,
   ImageOverlay,
-  textStyle,
+  ScrollableAvoidKeyboard,
 } from '@src/components/common';
 import {
   imageSignIn5Bg,
@@ -107,11 +106,13 @@ class SignIn5Component extends React.Component<SignIn5Props, State> {
           source={this.backgroundImage.imageSource}>
           <View style={themedStyle.headerContainer}>
             <Text
-              style={themedStyle.helloLabel}>
+              style={themedStyle.helloLabel}
+              status='control'>
               Sign In
             </Text>
             <Text
               style={themedStyle.signInLabel}
+              status='control'
               category='s1'>
               Sign in to your account with Email or SMS
             </Text>
@@ -148,7 +149,6 @@ class SignIn5Component extends React.Component<SignIn5Props, State> {
           </TabView>
           <Button
             style={themedStyle.signInButton}
-            textStyle={textStyle.button}
             size='giant'
             disabled={!signInButtonEnabled}
             onPress={this.onSignInButtonPress}>
@@ -156,9 +156,8 @@ class SignIn5Component extends React.Component<SignIn5Props, State> {
           </Button>
           <Button
             style={themedStyle.signUpButton}
-            textStyle={themedStyle.signUpText}
             appearance='ghost'
-            activeOpacity={0.75}
+            status='control'
             onPress={this.onSignUpButtonPress}>
             Don't have an account? Sign Up
           </Button>
@@ -193,34 +192,24 @@ export const SignIn5 = withStyles(SignIn5Component, (theme: ThemeType) => ({
   },
   tabTitle: {
     color: 'white',
-    ...textStyle.label,
   },
   helloLabel: {
     fontSize: 26,
     lineHeight: 32,
-    color: 'white',
-    ...textStyle.headline,
   },
   signInLabel: {
     marginTop: 8,
     textAlign: 'center',
-    color: 'white',
-    ...textStyle.subtitle,
   },
   smsCaptionLabel: {
     textAlign: 'center',
     paddingHorizontal: 32,
-    ...textStyle.paragraph,
   },
   signInButton: {
     marginHorizontal: 16,
   },
   signUpButton: {
     marginVertical: 12,
-  },
-  signUpText: {
-    color: 'white',
-    ...textStyle.subtitle,
   },
 }));
 

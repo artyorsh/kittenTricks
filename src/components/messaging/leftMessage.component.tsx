@@ -10,7 +10,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 import { Message } from '@src/core/model';
 import { MessageContent } from './messageContent.component';
 
@@ -48,33 +47,33 @@ class LeftMessageComponent extends React.Component<LeftMessageProps> {
 
 export const LeftMessage = withStyles(LeftMessageComponent, (theme: ThemeType) => ({
   triangle: {
-    borderLeftWidth: 10,
-    borderRightWidth: 10,
-    borderBottomWidth: 15,
+    borderLeftWidth: 8,
+    borderRightWidth: 8,
+    borderBottomWidth: 8,
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
     backgroundColor: 'transparent',
   },
   triangleLeft: {
     transform: [{ rotate: '-90deg' }],
-    borderBottomColor: theme['color-primary-default'],
+    borderBottomColor: theme['background-basic-color-1'],
   },
   cloudContainer: {
     flexDirection: 'row',
     alignItems: 'center',
   },
-  dateLabel: textStyle.caption1,
   cloud: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 16,
-    borderRadius: 8,
+    minHeight: 52,
+    borderRadius: 4,
+    padding: 4,
     maxWidth: Dimensions.get('window').width - 120,
   },
   cloudLeft: {
-    left: -3,
-    backgroundColor: theme['color-primary-default'],
+    left: -4,
+    backgroundColor: theme['background-basic-color-1'],
     marginRight: 16,
   },
 }));

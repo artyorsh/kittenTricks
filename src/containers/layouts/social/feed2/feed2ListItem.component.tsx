@@ -11,10 +11,7 @@ import {
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
 import { FeedActivityBar } from '@src/components/social';
-import {
-  ImageOverlay,
-  textStyle,
-} from '@src/components/common';
+import { ImageOverlay } from '@src/components/common';
 
 interface ListDerivedProps {
   index?: number;
@@ -64,6 +61,7 @@ class Feed2ListItemComponent extends React.Component<Feed2ListItemProps> {
           source={photo}>
           <Text
             style={themedStyle.categoryLabel}
+            status='control'
             category='h4'>
             {category}
           </Text>
@@ -93,13 +91,10 @@ export const Feed2ListItem = withStyles(Feed2ListItemComponent, (theme: ThemeTyp
     bottom: 0,
     marginHorizontal: 24,
     marginVertical: 24,
-    color: 'white',
-    ...textStyle.headline,
   },
   descriptionLabel: {
     marginHorizontal: 24,
     marginVertical: 24,
-    ...textStyle.subtitle,
   },
   activityContainer: {
     paddingVertical: 16,

@@ -18,7 +18,6 @@ import {
   Text,
   TextProps,
 } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 
 type IconProp = (style: StyleType) => React.ReactElement<ImageProps>;
 type ChildrenProp = string;
@@ -83,5 +82,4 @@ export const ProfileLocation = withStyles(ProfileLocationComponent, (theme: Them
     height: 14,
     tintColor: theme['text-hint-color'],
   },
-  text: textStyle.caption2,
 }));

@@ -12,10 +12,7 @@ import {
   Toggle,
   Text,
 } from '@kitten/ui';
-import {
-  ContainerView,
-  textStyle,
-} from '@src/components/common';
+import { ContainerView } from '@src/components/common';
 
 interface ComponentProps {
   soundEnabled: boolean;
@@ -56,7 +53,6 @@ class SettingsComponent extends React.Component<SettingsProps> {
           style={themedStyle.section}
           onPress={this.onEditProfilePress}>
           <Text
-            style={themedStyle.sectionText}
             category='s2'>
             Edit Profile
           </Text>
@@ -65,7 +61,6 @@ class SettingsComponent extends React.Component<SettingsProps> {
           style={themedStyle.section}
           onPress={this.onChangePasswordPress}>
           <Text
-            style={themedStyle.sectionText}
             category='s2'>
             Change Password
           </Text>
@@ -74,7 +69,6 @@ class SettingsComponent extends React.Component<SettingsProps> {
           style={[themedStyle.section, themedStyle.notificationSection]}
           onPress={this.onChangePasswordPress}>
           <Text
-            style={themedStyle.sectionText}
             category='s2'>
             Notification
           </Text>
@@ -92,7 +86,6 @@ class SettingsComponent extends React.Component<SettingsProps> {
           style={[themedStyle.section, themedStyle.soundEnabledSection]}
           onPress={this.onSoundEnabledPress}>
           <Text
-            style={themedStyle.sectionText}
             category='s2'>
             Sound Enabled
           </Text>
@@ -138,5 +131,4 @@ export const Settings = withStyles(SettingsComponent, (theme: ThemeType) => ({
     flexDirection: 'row',
     paddingTop: 40,
   },
-  sectionText: textStyle.subtitle,
 }));

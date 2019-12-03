@@ -13,10 +13,7 @@ import {
   Text,
 } from '@kitten/ui';
 import { ArticleActivityBar } from '@src/components/articles';
-import {
-  ContainerView,
-  textStyle,
-} from '@src/components/common';
+import { ContainerView } from '@src/components/common';
 import { ClockIconOutline } from '@src/assets/icons';
 import { Article } from '@src/core/model';
 
@@ -112,17 +109,14 @@ export const Article2 = withStyles(Article2Component, (theme: ThemeType) => ({
   titleLabel: {
     marginHorizontal: 24,
     marginTop: 48,
-    ...textStyle.headline,
   },
   contentLabel: {
     flex: 1,
     marginHorizontal: 24,
     marginVertical: 24,
-    ...textStyle.paragraph,
   },
   dateLabel: {
     marginLeft: 8,
-    ...textStyle.paragraph,
   },
   dateIcon: {
     width: 24,

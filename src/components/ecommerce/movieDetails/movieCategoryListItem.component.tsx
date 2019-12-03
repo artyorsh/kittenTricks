@@ -8,7 +8,6 @@ import { Text } from '@kitten/ui';
 import {
   Chips,
   ChipsProps,
-  textStyle,
 } from '@src/components/common';
 
 // @ts-ignore (`children` prop override)
@@ -28,7 +27,7 @@ class MovieCategoryListItemComponent extends React.Component<MovieCategoryListIt
         {...restProps}
         style={[themedStyle.container, style]}>
         <Text
-          style={themedStyle.label}
+          status='control'
           category='c1'>
           {children}
         </Text>
@@ -39,8 +38,4 @@ class MovieCategoryListItemComponent extends React.Component<MovieCategoryListIt
 
 export const MovieCategoryListItem = withStyles(MovieCategoryListItemComponent, (theme: ThemeType) => ({
   container: {},
-  label: {
-    color: 'white',
-    ...textStyle.caption1,
-  },
 }));

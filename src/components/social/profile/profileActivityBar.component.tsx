@@ -8,7 +8,6 @@ import {
   ActivityBar,
   ActivityBarProps,
   LikeButton,
-  textStyle,
 } from '@src/components/common';
 
 interface ComponentProps {
@@ -37,10 +36,8 @@ class ProfileActivityBarComponent extends React.Component<ProfileActivityBarProp
 }
 
 export const ProfileActivityBar = withStyles(ProfileActivityBarComponent, (theme: ThemeType) => ({
-
   likesLabel: {
     lineHeight: 0,
     marginHorizontal: 0,
-    ...textStyle.paragraph,
   },
 }));

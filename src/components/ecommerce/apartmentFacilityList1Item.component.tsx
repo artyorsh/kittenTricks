@@ -8,7 +8,6 @@ import {
   Button,
   ButtonProps,
 } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 
 interface ListDerivedProps {
   index?: number;
@@ -32,7 +31,6 @@ class ApartmentFacilityList1ItemComponent extends React.Component<ApartmentFacil
 
     return (
       <Button
-        textStyle={themedStyle.text}
         appearance='outline'
         size='tiny'
         {...restProps}
@@ -47,9 +45,5 @@ export const ApartmentFacilityList1Item = withStyles(ApartmentFacilityList1ItemC
   container: {
     borderWidth: 1,
     borderRadius: 15,
-  },
-  text: {
-    fontSize: 11,
-    ...textStyle.paragraph,
   },
 }));

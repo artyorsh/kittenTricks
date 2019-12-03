@@ -19,7 +19,6 @@ import {
 } from '@src/components/messaging';
 import { Conversation as ConversationModel } from '@src/core/model';
 import { SearchIconOutline } from '@src/assets/icons';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   searchEnabled: boolean;
@@ -59,7 +58,6 @@ class ConversationsListComponent extends React.Component<ConversationsListProps>
     return searchEnabled ? (
       <Input
         style={themedStyle.input}
-        textStyle={textStyle.paragraph}
         icon={SearchIconOutline}
         placeholder='Search Interlocutor...'
         onChangeText={this.onSearchStringChange}

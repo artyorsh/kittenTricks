@@ -14,7 +14,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import { textStyle } from './style';
 
 type IconProp = (style: StyleProp<ImageStyle>) => React.ReactElement<ImageProps>;
 
@@ -61,7 +60,6 @@ export const TextIcon = withStyles(TextIconComponent, (theme: ThemeType) => ({
   },
   text: {
     marginHorizontal: 8,
-    ...textStyle.paragraph,
   },
   icon: {
     width: 16,

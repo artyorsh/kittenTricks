@@ -11,7 +11,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   icon?: (style: StyleType) => React.ReactElement<ImageProps>;
@@ -33,7 +32,7 @@ class ArticleTipsComponent extends React.Component<ArticleTipsProps> {
       <View style={[themedStyle.container, style]}>
         {icon ? this.renderIconElement(themedStyle.icon) : null}
         <Text
-          style={themedStyle.text}>
+          status='control'>
           {children}
         </Text>
       </View>
@@ -50,9 +49,5 @@ export const ArticleTips = withStyles(ArticleTipsComponent, (theme: ThemeType) =
     height: 20,
     marginRight: 18,
     tintColor: 'white',
-  },
-  text: {
-    color: 'white',
-    ...textStyle.subtitle,
   },
 }));

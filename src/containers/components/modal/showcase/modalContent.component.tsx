@@ -13,7 +13,6 @@ import {
   Text,
   Avatar,
 } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 import { Profile } from '@src/core/model';
 
 interface ComponentProps {
@@ -49,8 +48,7 @@ class ModalContentComponent extends React.Component<ModalContentProps> {
           />
           <View>
             <Text
-              category='s2'
-              style={themedStyle.nameLabel}>
+              category='s2'>
               {name}
             </Text>
             <Text
@@ -81,9 +79,6 @@ export const ModalContent = withStyles(ModalContentComponent, (theme: ThemeType)
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 14,
-  },
-  nameLabel: {
-    ...textStyle.subtitle,
   },
   button: {
     alignSelf: 'center',

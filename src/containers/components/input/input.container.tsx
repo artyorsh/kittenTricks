@@ -21,7 +21,6 @@ import {
   SuccessInput,
   WarningInput,
 } from './showcase';
-import { textStyle } from '@src/components/common';
 
 type InputContainerProps = ThemedComponentProps & NavigationStackScreenProps;
 
@@ -34,74 +33,41 @@ class InputContainerComponent extends React.Component<InputContainerProps> {
       <Showcase>
         <ShowcaseSection title='State'>
           <ShowcaseItem title='Default'>
-            <DefaultInput
-              style={themedStyle.component}
-              textStyle={themedStyle.componentText}
-            />
+            <DefaultInput style={themedStyle.component}/>
           </ShowcaseItem>
           <ShowcaseItem title='Disabled'>
-            <DisabledInput
-              style={themedStyle.component}
-              textStyle={themedStyle.componentText}
-            />
+            <DisabledInput style={themedStyle.component}/>
           </ShowcaseItem>
         </ShowcaseSection>
         <ShowcaseSection title='Accessories'>
           <ShowcaseItem title='Icon'>
-            <IconInput
-              style={themedStyle.component}
-              textStyle={themedStyle.componentText}
-            />
+            <IconInput style={themedStyle.component}/>
           </ShowcaseItem>
           <ShowcaseItem title='Label'>
-            <LabelInput
-              style={themedStyle.component}
-              textStyle={themedStyle.componentText}
-            />
+            <LabelInput style={themedStyle.component}/>
           </ShowcaseItem>
           <ShowcaseItem title='Caption'>
-            <CaptionInput
-              style={themedStyle.component}
-              textStyle={themedStyle.componentText}
-            />
+            <CaptionInput style={themedStyle.component}/>
           </ShowcaseItem>
           <ShowcaseItem title='Caption Icon'>
-            <CaptionIconInput
-              style={themedStyle.component}
-              textStyle={themedStyle.componentText}
-            />
+            <CaptionIconInput style={themedStyle.component}/>
           </ShowcaseItem>
         </ShowcaseSection>
         <ShowcaseSection title='Status'>
           <ShowcaseItem title='Primary'>
-            <PrimaryInput
-              style={themedStyle.component}
-              textStyle={themedStyle.componentText}
-            />
+            <PrimaryInput style={themedStyle.component}/>
           </ShowcaseItem>
           <ShowcaseItem title='Success'>
-            <SuccessInput
-              style={themedStyle.component}
-              textStyle={themedStyle.componentText}
-            />
+            <SuccessInput style={themedStyle.component}/>
           </ShowcaseItem>
           <ShowcaseItem title='Info'>
-            <InfoInput
-              style={themedStyle.component}
-              textStyle={themedStyle.componentText}
-            />
+            <InfoInput style={themedStyle.component}/>
           </ShowcaseItem>
           <ShowcaseItem title='Warning'>
-            <WarningInput
-              style={themedStyle.component}
-              textStyle={themedStyle.componentText}
-            />
+            <WarningInput style={themedStyle.component}/>
           </ShowcaseItem>
           <ShowcaseItem title='Danger'>
-            <DangerInput
-              style={themedStyle.component}
-              textStyle={themedStyle.componentText}
-            />
+            <DangerInput style={themedStyle.component}/>
           </ShowcaseItem>
         </ShowcaseSection>
       </Showcase>
@@ -116,5 +82,4 @@ export const InputContainer = withStyles(InputContainerComponent, (theme: ThemeT
   component: {
     flex: 1,
   },
-  componentText: textStyle.paragraph,
 }));

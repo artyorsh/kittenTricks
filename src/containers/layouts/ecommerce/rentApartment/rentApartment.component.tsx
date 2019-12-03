@@ -19,10 +19,7 @@ import {
   PriceText,
 } from '@src/components/ecommerce';
 import { Apartment } from '@src/core/model';
-import {
-  ContainerView,
-  textStyle,
-} from '@src/components/common';
+import { ContainerView } from '@src/components/common';
 
 interface ComponentProps {
   apartment: Apartment;
@@ -58,7 +55,6 @@ class RentApartmentComponent extends React.Component<RentApartmentProps> {
         <View style={themedStyle.infoContainer}>
           <View style={themedStyle.detailsContainer}>
             <Text
-              style={themedStyle.titleLabel}
               category='h6'>
               {apartment.title}
             </Text>
@@ -78,7 +74,6 @@ class RentApartmentComponent extends React.Component<RentApartmentProps> {
               </PriceText>
               <Button
                 style={themedStyle.bookButton}
-                textStyle={textStyle.button}
                 onPress={this.onBookPress}>
                 BOOK NOW
               </Button>
@@ -86,7 +81,6 @@ class RentApartmentComponent extends React.Component<RentApartmentProps> {
           </View>
           <View style={themedStyle.facilitiesContainer}>
             <Text
-              style={themedStyle.sectionLabel}
               category='s1'>
               Facilities
             </Text>
@@ -103,19 +97,17 @@ class RentApartmentComponent extends React.Component<RentApartmentProps> {
         </View>
         <View style={themedStyle.aboutSection}>
           <Text
-            style={themedStyle.sectionLabel}
             category='s1'>
             About
           </Text>
           <Text
-            style={themedStyle.aboutLabel}
             appearance='hint'>
             {apartment.description}
           </Text>
         </View>
         <View style={themedStyle.photoSection}>
           <Text
-            style={[themedStyle.sectionLabel, themedStyle.photoLabel]}
+            style={themedStyle.photoLabel}
             category='s1'>
             Photos
           </Text>
@@ -175,10 +167,8 @@ export const RentApartment = withStyles(RentApartmentComponent, (theme: ThemeTyp
     marginHorizontal: 16,
     marginVertical: 16,
   },
-  titleLabel: textStyle.headline,
   rentLabel: {
     marginTop: 24,
-    ...textStyle.paragraph,
   },
   bookButton: {},
   priceLabel: {
@@ -192,12 +182,9 @@ export const RentApartment = withStyles(RentApartmentComponent, (theme: ThemeTyp
   priceScaleLabel: {
     fontSize: 13,
     lineHeight: 24,
-    ...textStyle.paragraph,
   },
-  sectionLabel: textStyle.subtitle,
   aboutLabel: {
     marginVertical: 16,
-    ...textStyle.paragraph,
   },
   photoLabel: {
     marginHorizontal: 24,

@@ -16,7 +16,6 @@ import {
 } from '@src/components/social';
 import {
   RateBar,
-  textStyle,
   ContainerView,
 } from '@src/components/common';
 import {
@@ -81,7 +80,6 @@ class Profile2Component extends React.Component<Profile2Props> {
           </ProfileInfo1>
           <Button
             style={themedStyle.followButton}
-            textStyle={textStyle.button}
             onPress={this.onFollowButtonPress}>
             FOLLOW
           </Button>
@@ -151,7 +149,6 @@ export const Profile2 = withStyles(Profile2Component, (theme: ThemeType) => ({
   },
   descriptionLabel: {
     marginVertical: 24,
-    ...textStyle.paragraph,
   },
   profileSocials: {
     flexDirection: 'column',

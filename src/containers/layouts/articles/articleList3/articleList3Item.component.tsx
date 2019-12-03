@@ -13,10 +13,7 @@ import {
   ArticleActivityBar,
   ArticleTips,
 } from '@src/components/articles';
-import {
-  ImageOverlay,
-  textStyle,
-} from '@src/components/common';
+import { ImageOverlay } from '@src/components/common';
 import { Article } from '@src/core/model';
 
 // @ts-ignore (override `onPress` prop)
@@ -56,7 +53,7 @@ class ArticleList3ItemComponent extends React.Component<ArticleList3ItemProps> {
           style={themedStyle.image}
           source={article.image.imageSource}>
           <Text
-            style={themedStyle.titleLabel}
+            status='control'
             category='h4'>
             {article.title}
           </Text>
@@ -97,8 +94,6 @@ export const ArticleList3Item = withStyles(ArticleList3ItemComponent, (theme: Th
   },
   titleLabel: {
     maxWidth: 192,
-    color: 'white',
-    ...textStyle.headline,
   },
   activityBarLabel: {
     color: 'white',

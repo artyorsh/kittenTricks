@@ -11,7 +11,6 @@ import {
   TopNavigationActionProps,
   TopNavigationProps,
 } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 import { SafeAreaView } from './safeAreaView.component';
 
 export interface ComponentProps {
@@ -51,8 +50,6 @@ class TopNavigationBarComponent extends React.Component<TopNavigationBarProps> {
         <TopNavigation
           alignment='center'
           title={title}
-          titleStyle={textStyle.subtitle}
-          subtitleStyle={textStyle.caption1}
           leftControl={leftControlElement}
         />
       </SafeAreaView>

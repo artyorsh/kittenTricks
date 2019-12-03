@@ -16,7 +16,6 @@ import {
   Button,
   Text,
 } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 import {
   CloseIconOutline,
   MinusIconFill,
@@ -109,7 +108,6 @@ class CartProductComponent extends React.Component<CartProductProps> {
           <View style={themedStyle.counterContainer}>
             <Button
               style={themedStyle.counterButton}
-              textStyle={textStyle.button}
               size='small'
               icon={this.renderMinusIcon}
               onPress={this.onRemoveCopy}/>
@@ -118,7 +116,6 @@ class CartProductComponent extends React.Component<CartProductProps> {
             </Text>
             <Button
               style={themedStyle.counterButton}
-              textStyle={textStyle.button}
               size='small'
               icon={this.renderPlusIcon}
               onPress={this.onAddCopy}
@@ -162,8 +159,6 @@ export const CartProduct = withStyles(CartProductComponent, (theme: ThemeType) =
   labelMargin: {
     marginBottom: 4,
   },
-  nameLabel: textStyle.subtitle,
-  typeLabel: textStyle.paragraph,
   counterContainer: {
     flexDirection: 'row',
     alignItems: 'center',

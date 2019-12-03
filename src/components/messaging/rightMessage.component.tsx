@@ -10,7 +10,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 import { Message } from '@src/core/model';
 import { MessageContent } from './messageContent.component';
 
@@ -29,7 +28,6 @@ class RigheMessageComponent extends React.Component<RigheMessageProps> {
     return [
       <Text
         key={0}
-        style={themedStyle.dateLabel}
         appearance='hint'
         category='c1'>{message.date}
       </Text>,
@@ -47,33 +45,33 @@ class RigheMessageComponent extends React.Component<RigheMessageProps> {
 
 export const RightMessage = withStyles(RigheMessageComponent, (theme: ThemeType) => ({
   triangle: {
-    borderLeftWidth: 10,
-    borderRightWidth: 10,
-    borderBottomWidth: 15,
+    borderLeftWidth: 8,
+    borderRightWidth: 8,
+    borderBottomWidth: 8,
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
     backgroundColor: 'transparent',
   },
   triangleRight: {
     transform: [{ rotate: '90deg' }],
-    borderBottomColor: theme['text-hint-color'],
+    borderBottomColor: theme['color-primary-default'],
   },
   cloudContainer: {
     flexDirection: 'row',
     alignItems: 'center',
   },
-  dateLabel: textStyle.caption1,
   cloud: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 16,
-    borderRadius: 8,
+    minHeight: 52,
+    borderRadius: 4,
+    padding: 4,
     maxWidth: Dimensions.get('window').width - 120,
   },
   cloudRight: {
-    left: 3,
-    backgroundColor: theme['text-hint-color'],
+    left: 4,
+    backgroundColor: theme['color-primary-default'],
     marginLeft: 16,
   },
 }));

@@ -14,7 +14,6 @@ import {
   Text,
 } from '@kitten/ui';
 import { LayoutGridListItemData } from './type';
-import { textStyle } from '../style';
 
 interface ComponentProps {
   data: LayoutGridListItemData;
@@ -33,13 +32,11 @@ class LayoutGridListItemComponent extends React.Component<LayoutGridListItemProp
         {...restProps}>
         <View style={themedStyle.detailsContainer}>
           <Text
-            style={textStyle.subtitle}
             category='s1'>
             {data.title}
           </Text>
           <Text
             appearance='hint'
-            style={textStyle.paragraph}
             category='p2'>
             {data.description}
           </Text>

@@ -18,7 +18,6 @@ import {
 } from '@kitten/ui';
 import { Product as ProductModel } from '@src/core/model';
 import { BuyActionModel } from './productDetails.container';
-import { textStyle } from '@src/components/common';
 
 const { width, height } = Dimensions.get('window');
 
@@ -46,7 +45,6 @@ class ByuModalComponent extends React.Component<ByuModalProps> {
         activeOpacity={0.95}
         onPress={info.item.action}>
         <Text
-          style={themedStyle.actionLabel}
           category='s2'>
           {info.item.title}
         </Text>
@@ -67,12 +65,10 @@ class ByuModalComponent extends React.Component<ByuModalProps> {
         <View style={themedStyle.container} key={0}>
           <View style={themedStyle.headerContainer}>
             <Text
-              style={themedStyle.nameLabel}
               category='h6'>
               {product.name}
             </Text>
             <Text
-              style={themedStyle.countLabel}
               category='p2'>
               {`You have ${shoppingItemsCount} in your Shopping Cart`}
             </Text>
@@ -83,7 +79,6 @@ class ByuModalComponent extends React.Component<ByuModalProps> {
             renderItem={this.renderAction}
           />
           <Button
-            textStyle={textStyle.button}
             appearance='ghost'
             size='large'
             onPress={this.onCancel}>
@@ -124,8 +119,6 @@ export const BuyProductModal = withStyles(ByuModalComponent, (theme: ThemeType) 
     alignItems: 'center',
     justifyContent: 'center',
   },
-  nameLabel: textStyle.headline,
-  countLabel: textStyle.paragraph,
   actionsList: {
     marginTop: 16,
     backgroundColor: 'transparent',
@@ -137,5 +130,4 @@ export const BuyProductModal = withStyles(ByuModalComponent, (theme: ThemeType) 
     borderBottomColor: theme['border-basic-color-4'],
     borderBottomWidth: 1.5,
   },
-  actionLabel: textStyle.subtitle,
 }));

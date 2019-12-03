@@ -9,7 +9,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   description: string;
@@ -28,13 +27,11 @@ class MovieDetailListItemComponent extends React.Component<MovieDetailListItemPr
         {...restProps}
         style={[themedStyle.container, style]}>
         <Text
-          style={themedStyle.descriptionLabel}
           appearance='hint'
           category='s1'>
           {description}
         </Text>
         <Text
-          style={themedStyle.valueLabel}
           category='s1'>
           {value}
         </Text>
@@ -47,6 +44,4 @@ export const MovieDetailListItem = withStyles(MovieDetailListItemComponent, (the
   container: {
     alignItems: 'center',
   },
-  descriptionLabel: textStyle.subtitle,
-  valueLabel: textStyle.subtitle,
 }));

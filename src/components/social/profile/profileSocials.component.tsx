@@ -12,7 +12,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   followers: number;
@@ -63,9 +62,9 @@ class ProfileSocialsComponent extends React.Component<ProfileSocialsProps> {
           activeOpacity={0.65}
           style={themedStyle.parameterContainer}
           onPress={this.onFollowingButtonPress}>
-          <Text style={[themedStyle.valueLabel, derivedTextStyle]}>{`${following}`}</Text>
+          <Text style={derivedTextStyle}>{`${following}`}</Text>
           <Text
-            style={[themedStyle.hintLabel, derivedTextStyle]}
+            style={derivedTextStyle}
             appearance='hint'
             category='s2'>
             Following
@@ -75,9 +74,9 @@ class ProfileSocialsComponent extends React.Component<ProfileSocialsProps> {
           activeOpacity={0.65}
           style={themedStyle.parameterContainer}
           onPress={this.onPostsButtonPress}>
-          <Text style={[themedStyle.valueLabel, derivedTextStyle]}>{`${posts}`}</Text>
+          <Text style={derivedTextStyle}>{`${posts}`}</Text>
           <Text
-            style={[themedStyle.hintLabel, derivedTextStyle]}
+            style={derivedTextStyle}
             appearance='hint'
             category='s2'>
             Posts
@@ -96,6 +95,4 @@ export const ProfileSocials = withStyles(ProfileSocialsComponent, (theme: ThemeT
   parameterContainer: {
     alignItems: 'center',
   },
-  valueLabel: textStyle.caption2,
-  hintLabel: textStyle.subtitle,
 }));

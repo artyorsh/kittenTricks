@@ -16,7 +16,6 @@ import {
 import {
   ActivityAuthoring,
   ImageOverlay,
-  textStyle,
 } from '@src/components/common';
 import { BulbIconFill } from '@src/assets/icons';
 import { Article } from '@src/core/model';
@@ -58,7 +57,7 @@ class ArticleList2ItemComponent extends React.Component<ArticleList2ItemProps> {
           style={themedStyle.image}
           source={article.image.imageSource}>
           <Text
-            style={themedStyle.titleLabel}
+            status='control'
             category='h4'>
             {article.title}
           </Text>
@@ -104,7 +103,5 @@ export const ArticleList2Item = withStyles(ArticleList2ItemComponent, (theme: Th
   },
   titleLabel: {
     maxWidth: 192,
-    color: 'white',
-    ...textStyle.headline,
   },
 }));

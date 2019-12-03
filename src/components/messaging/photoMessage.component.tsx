@@ -46,12 +46,12 @@ export const PhotoMessage = withStyles(PhotoMessageComponent, (theme: ThemeType)
   fullMessageImage: {
     width: 64,
     height: 64,
-    borderRadius: 20,
+    borderRadius: 4,
   },
   preViewAppearanceImage: {
     width: 124,
     height: 124,
-    borderRadius: 12,
+    borderRadius: 4,
     justifyContent: 'center',
     alignItems: 'center',
   },

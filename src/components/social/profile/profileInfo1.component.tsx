@@ -13,7 +13,6 @@ import {
   Avatar,
   Text,
 } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   photo: ImageSourcePropType;
@@ -39,12 +38,10 @@ class ProfileInfo1Component extends React.Component<ProfileInfo1Props> {
         />
         <View style={themedStyle.detailsContainer}>
           <Text
-            style={themedStyle.nameLabel}
             category='h5'>
             {name}
           </Text>
           <Text
-            style={themedStyle.locationLabel}
             appearance='hint'
             category='s2'>
             {location}
@@ -64,9 +61,5 @@ export const ProfileInfo1 = withStyles(ProfileInfo1Component, (theme: ThemeType)
     flex: 1,
     justifyContent: 'center',
     marginLeft: 24,
-  },
-  nameLabel: textStyle.headline,
-  locationLabel: {
-    ...textStyle.subtitle,
   },
 }));

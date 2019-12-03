@@ -11,7 +11,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Avatar } from '@kitten/ui';
-import { textStyle } from '@src/components/common/style';
 
 interface ComponentProps {
   photo: ImageSourcePropType;
@@ -35,9 +34,8 @@ class ActivityAuthoringComponent extends React.Component<ActivitiAuthoringProps>
           source={photo}
         />
         <View style={themedStyle.authorInfoContainer}>
-          <Text style={themedStyle.authorNameLabel}>{name}</Text>
+          <Text>{name}</Text>
           <Text
-            style={themedStyle.dateLabel}
             appearance='hint'
             category='p2'>
             {date}
@@ -59,6 +57,4 @@ export const ActivityAuthoring = withStyles(ActivityAuthoringComponent, (theme: 
   authorPhoto: {
     margin: 0,
   },
-  authorNameLabel: textStyle.subtitle,
-  dateLabel: textStyle.paragraph,
 }));

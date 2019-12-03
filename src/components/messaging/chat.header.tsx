@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavigationStackScreenProps } from 'react-navigation-stack';
 import {
+  StyleType,
   ThemedComponentProps,
   ThemeType,
   withStyles,
@@ -13,7 +14,7 @@ import {
   TopNavigationActionProps,
   TopNavigationProps,
 } from '@kitten/ui';
-import { ArrowIosBackFill } from '@src/assets/icons';
+import { ArrowBackFill } from '@src/assets/icons';
 import { SafeAreaView } from '@src/core/navigation';
 import { Profile } from '@src/core/model';
 
@@ -48,17 +49,20 @@ class ChatHeaderComponent extends React.Component<ChatHeaderProps> {
   private renderLeftControl = (): React.ReactElement<TopNavigationActionProps> => {
     return (
       <TopNavigationAction
-        icon={ArrowIosBackFill}
+        icon={ArrowBackFill}
         onPress={this.onBack}
       />
     );
   };
 
-  private renderProfileAvatar = (): React.ReactElement<AvatarProps> => {
-    const { interlocutor } = this.props;
+  private renderProfileAvatar = (style: StyleType): React.ReactElement<AvatarProps> => {
+    const { interlocutor, themedStyle } = this.props;
 
     return (
-      <Avatar source={interlocutor.photo.imageSource}/>
+      <Avatar
+        style={themedStyle.avatar}
+        source={interlocutor.photo.imageSource}
+      />
     );
   };
 
@@ -101,6 +105,11 @@ class ChatHeaderComponent extends React.Component<ChatHeaderProps> {
 export const ChatHeader = withStyles(ChatHeaderComponent, (theme: ThemeType) => ({
   container: {
     backgroundColor: theme['background-basic-color-1'],
+  },
+  avatar: {
+    width: 40,
+    height: 40,
+    tintColor: null,
   },
 }));
 

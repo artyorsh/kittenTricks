@@ -16,6 +16,7 @@ import {
   Button,
   ButtonProps,
   Input,
+  Layout,
   List,
 } from '@kitten/ui';
 import {
@@ -27,7 +28,6 @@ import {
   ChatMessageProps,
 } from '@src/components/messaging';
 import {
-  MicIconFill,
   PaperPlaneIconFill,
   PlusIconFill,
 } from '@src/assets/icons';
@@ -41,10 +41,7 @@ import {
 } from '@src/core/data/profile';
 import { UiMessageModel } from '../container/uiMessage.model';
 import { Chat2FileSection } from './chat2FileSection.component';
-import {
-  AvoidKeyboard,
-  textStyle,
-} from '@src/components/common';
+import { AvoidKeyboard } from '@src/components/common';
 import { StringValidator } from '@src/core/validators';
 
 interface ComponentProps {
@@ -209,22 +206,23 @@ class Chat2Component extends React.Component<Chat2ComponentProps> {
             onContentSizeChange={this.onListContentSizeChange}
             renderItem={this.renderMessage}
           />
-          <View style={themedStyle.inputContainer}>
+          <Layout style={themedStyle.inputContainer}>
             <Button
               style={themedStyle.addMessageButton}
+              status='control'
               icon={PlusIconFill}
               onPress={this.onAddButtonPress}
             />
             <Input
               style={themedStyle.messageInput}
-              textStyle={textStyle.paragraph}
-              icon={MicIconFill}
+              icon={PaperPlaneIconFill}
+              size='large'
               value={newMessage}
               placeholder='Message...'
               onChangeText={this.onNewMessageChange}
             />
             {sendMessageButtonElement}
-          </View>
+          </Layout>
           {fileSectionOpened && this.renderFileSection()}
         </View>
       </AvoidKeyboard>
@@ -248,7 +246,6 @@ export const Chat2 = withStyles(Chat2Component, (theme: ThemeType) => ({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: theme['background-basic-color-1'],
   },
   addMessageButton: {
     width: 26,

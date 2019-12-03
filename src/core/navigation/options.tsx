@@ -5,7 +5,7 @@ import { NavigationStackScreenProps } from 'react-navigation-stack';
 import { NavigationTabScreenProps } from 'react-navigation-tabs';
 import { EcommerceHeader } from '@src/components/ecommerce';
 import { MenuContainer } from '@src/containers/menu';
-import { ArrowIosBackFill } from '@src/assets/icons';
+import { ArrowBackFill } from '@src/assets/icons';
 import { TopNavigationBar } from './components/topNavigationBar.component';
 import {
   getCurrentRouteState,
@@ -36,7 +36,7 @@ const MenuTopNavigationParams: TopNavigationParams = {
       <TopNavigationBar
         {...props}
         title={routeName}
-        backIcon={isRootRoute(index) && ArrowIosBackFill}
+        backIcon={isRootRoute(index) && ArrowBackFill}
         onBackPress={() => {
           props.navigation.goBack(KEY_NAVIGATION_BACK);
         }}

@@ -8,10 +8,7 @@ import {
   ThemeType,
   withStyles,
 } from '@kitten/theme';
-import {
-  textStyle,
-  ValidationInput,
-} from '@src/components/common';
+import { ValidationInput } from '@src/components/common';
 import {
   EmailValidator,
   PasswordValidator,
@@ -82,8 +79,6 @@ class SignInForm1Component extends React.Component<SignInForm1Props, State> {
         style={[themedStyle.container, style]}>
         <ValidationInput
           style={themedStyle.emailInput}
-          textStyle={textStyle.paragraph}
-          labelStyle={textStyle.label}
           label='EMAIL'
           placeholder='Email'
           validator={EmailValidator}
@@ -91,8 +86,6 @@ class SignInForm1Component extends React.Component<SignInForm1Props, State> {
         />
         <ValidationInput
           style={themedStyle.passwordInput}
-          textStyle={textStyle.paragraph}
-          labelStyle={textStyle.label}
           secureTextEntry={true}
           placeholder='Password'
           label='PASSWORD'

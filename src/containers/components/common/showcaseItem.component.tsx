@@ -9,7 +9,6 @@ import {
   withStyles,
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   title: string;
@@ -49,6 +48,5 @@ export const ShowcaseItem = withStyles(ShowcaseItemComponent, (theme: ThemeType)
   },
   titleLabel: {
     minWidth: 128,
-    ...textStyle.subtitle,
   },
 }));

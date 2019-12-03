@@ -35,10 +35,7 @@ import {
   profile2,
 } from '@src/core/data/profile';
 import { UiMessageModel } from '../container/uiMessage.model';
-import {
-  AvoidKeyboard,
-  textStyle,
-} from '@src/components/common';
+import { AvoidKeyboard } from '@src/components/common';
 import { StringValidator } from '@src/core/validators';
 
 interface ComponentProps {
@@ -144,14 +141,12 @@ class Chat1Component extends React.Component<Chat1ComponentProps> {
         <View style={themedStyle.inputContainer}>
           <Button
             style={themedStyle.addMessageButton}
-            textStyle={textStyle.button}
             icon={PlusIconFill}
             onPress={this.onMessageAdd}
           />
           <Input
             icon={MicIconFill}
             style={themedStyle.messageInput}
-            textStyle={textStyle.paragraph}
             value={newMessage}
             placeholder='Message...'
             onChangeText={this.onNewMessageChange}

@@ -16,7 +16,6 @@ import {
   RadioProps,
   Text,
 } from '@kitten/ui';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   image: ImageSourcePropType;
@@ -66,12 +65,11 @@ class ProductInfoComponent extends React.Component<ProductInfoProps> {
           <View style={[themedStyle.nameContainer, themedStyle.bottomSpace]}>
             <View>
               <Text
-                style={[themedStyle.nameLabel, themedStyle.labelBottomSpace]}
+                style={themedStyle.labelBottomSpace}
                 category='h6'>
                 {name}
               </Text>
               <Text
-                style={themedStyle.typeLabel}
                 appearance='hint'
                 category='p2'>
                 {type}
@@ -80,22 +78,22 @@ class ProductInfoComponent extends React.Component<ProductInfoProps> {
             <Text style={themedStyle.costLabel}>{price}</Text>
           </View>
           <Text
-            style={[themedStyle.descriptionText, themedStyle.bottomSpace]}
+            style={themedStyle.bottomSpace}
             appearance='hint'>
             {description}
           </Text>
           <Text
-            style={[themedStyle.nameLabel, themedStyle.labelBottomSpace]}
+            style={themedStyle.labelBottomSpace}
             category='h6'>
             Size
           </Text>
           <Text
-            style={[themedStyle.descriptionText, themedStyle.bottomSpace]}
+            style={themedStyle.bottomSpace}
             appearance='hint'>
             {size}
           </Text>
           <Text
-            style={[themedStyle.nameLabel, themedStyle.labelBottomSpace]}
+            style={themedStyle.labelBottomSpace}
             category='h6'>
             Color
           </Text>
@@ -126,14 +124,10 @@ export const ProductInfo = withStyles(ProductInfoComponent, (theme: ThemeType) =
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  nameLabel: textStyle.headline,
-  typeLabel: textStyle.paragraph,
   costLabel: {
-    ...textStyle.headline,
     fontSize: 26,
     lineHeight: 32,
   },
-  descriptionText: textStyle.paragraph,
   colorSelector: {
     flexDirection: 'row',
     marginHorizontal: 16,

@@ -7,7 +7,6 @@ import {
 } from '@kitten/theme';
 import { Text } from '@kitten/ui';
 import { Message } from '@src/core/model';
-import { textStyle } from '@src/components/common';
 
 interface ComponentProps {
   message: Message;
@@ -24,7 +23,8 @@ class MessageContentComponent extends React.Component<MessageContentProps> {
     if (message.text) {
       return (
         <Text
-          style={themedStyle.messageLabel}>
+          style={themedStyle.text}
+          status='control'>
           {message.text}
         </Text>
       );
@@ -38,8 +38,7 @@ class MessageContentComponent extends React.Component<MessageContentProps> {
 }
 
 export const MessageContent = withStyles(MessageContentComponent, (theme: ThemeType) => ({
-  messageLabel: {
-    color: 'white',
-    ...textStyle.paragraph,
+  text: {
+    margin: 16,
   },
 }));
