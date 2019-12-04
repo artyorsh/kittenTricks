@@ -48,10 +48,6 @@ class MenuComponent extends React.Component<Props> {
               title='Components'
               icon={StarIconOutline}
             />
-            <BottomNavigationTab
-              title='Themes'
-              icon={ColorPaletteIconOutline}
-            />
           </BottomNavigation>
         </ThemeProvider>
       </SafeAreaView>

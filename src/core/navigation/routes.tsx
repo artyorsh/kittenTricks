@@ -103,6 +103,7 @@ import {
   MenuNavigationOptions,
   SocialNavigationOptions,
 } from './options';
+import { AppriseContainer } from '@src/containers/layouts/apprise';
 
 const EcommerceNavigationMap: NavigationRouteConfigMap<any, NavigationStackProp> = {
   ['Add New Card']: {
@@ -295,6 +296,7 @@ const ComponentsNavigator: NavigationContainer = createStackNavigator(
 const LayoutsNavigator: NavigationContainer = createStackNavigator(
   {
     ['Layouts']: LayoutsContainer,
+    ['Apprise']: AppriseContainer,
     ['Auth']: AuthContainer,
     ['Social']: SocialContainer,
     ['Articles']: ArticlesContainer,
@@ -310,7 +312,7 @@ const LayoutsNavigator: NavigationContainer = createStackNavigator(
 const MenuNavigator = createBottomTabNavigator({
   ['Layouts']: LayoutsNavigator,
   ['Components']: ComponentsNavigator,
-  ['Themes']: ThemesNavigator,
+  // ['Themes']: ThemesNavigator,
 }, {
   tabBarComponent: MenuContainer,
 });
@@ -325,7 +327,6 @@ const AppNavigator: NavigationContainer = createStackNavigator({
   ...EcommerceNavigationMap,
 }, {
   headerMode: 'screen',
-  initialRouteName: 'Profile 7',
   defaultNavigationOptions: {
     header: null,
   },

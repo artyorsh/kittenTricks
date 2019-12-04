@@ -15,6 +15,7 @@ import {
   MenuIconMessagingDark,
   MenuIconDashboardsDark,
   MenuIconEcommerceDark,
+  MenuIconApprise,
 } from '@src/assets/icons';
 import {
   ThemeKey,
@@ -23,6 +24,11 @@ import {
 import { LayoutsContainerData } from './type';
 
 export const routes: LayoutsContainerData[] = [
+  {
+    title: 'Apprise',
+    icon: MenuIconDashboards,
+    route: 'Apprise',
+  },
   {
     title: 'Auth',
     icon: (style: StyleProp<ImageStyle>, theme: ThemeKey) => {
