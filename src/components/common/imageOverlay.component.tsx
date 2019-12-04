@@ -11,7 +11,7 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 
 interface OverlayImageStyle extends ViewStyle {
   overlayColor: string;

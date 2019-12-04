@@ -8,11 +8,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Avatar,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { PinIconOutline } from '@src/assets/icons';
 import { ProfileLocation } from './profileLocation.component';
 

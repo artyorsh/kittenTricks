@@ -10,7 +10,7 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { ThemeKey } from '@src/core/themes';
 import Constants from 'expo-constants';
 

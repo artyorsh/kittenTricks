@@ -5,7 +5,7 @@ import {
   ListItem,
   ListItemProps,
   ListProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 
 
 interface ListItemModel {

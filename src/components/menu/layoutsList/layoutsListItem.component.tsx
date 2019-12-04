@@ -5,12 +5,12 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   ListItem,
   ListItemProps,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { LayoutsListItemData } from './type';
 import {
   ThemeContext,

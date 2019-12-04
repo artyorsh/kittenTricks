@@ -7,7 +7,7 @@ import {
   withStyles,
   ThemeType,
   ThemedComponentProps,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { ApartmentFacility } from '@src/core/model';
 import {
   ApartmentFacilityList2Item,

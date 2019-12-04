@@ -7,11 +7,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Button,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { ContainerView } from '@src/components/common';
 import { PaymentCard as PaymentCardModel } from '@src/core/model';
 import {

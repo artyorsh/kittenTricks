@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Radio,
   RadioProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 
 interface CheckBoxShowcaseComponentState {
   checked: boolean;

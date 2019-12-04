@@ -4,12 +4,12 @@ import {
   withStyles,
   ThemeType,
   ThemedComponentProps,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Button,
   Input,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { BookHeader } from '@src/components/ecommerce';
 import { CommentsList1 } from '@src/components/articles';
 import {

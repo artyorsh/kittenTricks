@@ -4,11 +4,11 @@ import {
   withStyles,
   ThemeType,
   ThemedComponentProps,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   List,
   ListProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import {
   LayoutListItem,
   LayoutListItemProps,

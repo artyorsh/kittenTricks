@@ -4,9 +4,9 @@ import {
   withStyles,
   ThemeType,
   ThemedComponentProps,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { Exercise } from '@src/core/model/exercise.model';
-import { List } from '@kitten/ui';
+import { List } from '@ui-kitten/components';
 import {
   TrainingCard1,
   TrainingCardProps,

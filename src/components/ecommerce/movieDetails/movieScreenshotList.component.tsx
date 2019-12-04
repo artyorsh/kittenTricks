@@ -7,13 +7,13 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   List,
   ListItem,
   ListItemProps,
   ListProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { ImageSource } from '@src/assets/images';
 
 // @ts-ignore (`renderItem` prop override)

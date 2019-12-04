@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Button,
   ButtonProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { StarIconFill } from '@src/assets/icons';
 
 type ButtonElement = React.ReactElement<ButtonProps>;

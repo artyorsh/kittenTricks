@@ -12,7 +12,7 @@ import {
   ThemeType,
   ThemedComponentProps,
   StyleType,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { Exercise } from '@src/core/model/exercise.model';
 import {
   TrainingCard1,
@@ -21,7 +21,7 @@ import {
 import {
   List,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 
 interface ComponentProps {
   exercises: Exercise[];

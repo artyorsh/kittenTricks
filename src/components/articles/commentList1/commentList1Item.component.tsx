@@ -9,12 +9,12 @@ import {
   ListItemProps,
   ListProps,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { ActivityAuthoring } from '@src/components/common';
 import { MoreHorizontalIconFill } from '@src/assets/icons';
 import { Comment as CommentModel } from '@src/core/model';

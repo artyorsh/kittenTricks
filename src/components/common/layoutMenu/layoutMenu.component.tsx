@@ -4,13 +4,13 @@ import {
   ThemeProvider,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Tab,
   TabProps,
   TabView,
   TabViewProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import {
   GridIconOutline,
   ListIconFill,

@@ -11,14 +11,14 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Button,
   ButtonProps,
   Input,
   Layout,
   List,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import {
   Alignments,
   ChatFileMessage,

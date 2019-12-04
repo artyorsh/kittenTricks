@@ -5,11 +5,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   List,
   Button,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { ArticleHeader } from '@src/components/articles';
 import { Article } from '@src/core/model';
 import {

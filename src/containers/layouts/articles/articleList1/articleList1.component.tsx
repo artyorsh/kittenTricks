@@ -4,8 +4,8 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
-import { List } from '@kitten/ui';
+} from '@ui-kitten/components';
+import { List } from '@ui-kitten/components';
 import { Article } from '@src/core/model';
 import {
   ArticleList1Item,

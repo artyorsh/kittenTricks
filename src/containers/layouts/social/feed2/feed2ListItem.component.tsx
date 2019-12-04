@@ -8,8 +8,8 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
-import { Text } from '@kitten/ui';
+} from '@ui-kitten/components';
+import { Text } from '@ui-kitten/components';
 import { FeedActivityBar } from '@src/components/social';
 import { ImageOverlay } from '@src/components/common';
 

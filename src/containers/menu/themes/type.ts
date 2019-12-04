@@ -1,4 +1,4 @@
-import { ThemeType } from '@kitten/theme';
+import { ThemeType } from '@ui-kitten/components';
 import { ThemeKey } from '@src/core/themes';
 
 export interface Theme {

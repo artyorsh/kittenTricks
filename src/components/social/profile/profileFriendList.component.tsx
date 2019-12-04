@@ -8,11 +8,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   List,
   ListProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { Profile as ProfileModel } from '@src/core/model';
 import {
   ProfileFriendListItem,

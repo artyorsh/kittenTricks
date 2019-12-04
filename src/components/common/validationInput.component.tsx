@@ -3,11 +3,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Input,
   InputProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 
 interface ComponentProps extends InputProps {
   validator: (value: string) => boolean;

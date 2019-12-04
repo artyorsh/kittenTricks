@@ -10,8 +10,8 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
-import { Text } from '@kitten/ui';
+} from '@ui-kitten/components';
+import { Text } from '@ui-kitten/components';
 import { PaymentCard as PaymentCardModel } from '@src/core/model';
 import { MoreVerticalIconFill } from '@src/assets/icons';
 

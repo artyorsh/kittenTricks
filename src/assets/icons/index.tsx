@@ -13,7 +13,7 @@ import {
 import {
   Icon,
   IconElement,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 
 export const MenuIconAuth = (style: StyleProp<ImageStyle>): AssetIconElement => {
   const source: IconSource = {

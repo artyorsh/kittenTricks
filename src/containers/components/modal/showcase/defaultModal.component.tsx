@@ -1,5 +1,5 @@
 import React from 'react';
-import { ModalProps } from '@kitten/ui';
+import { ModalProps } from '@ui-kitten/components';
 import { ModalShowcase } from './modalShowcase.component';
 
 type ModalElement = React.ReactElement<ModalProps>;

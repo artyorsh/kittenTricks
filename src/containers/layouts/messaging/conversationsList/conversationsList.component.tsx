@@ -7,12 +7,12 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   List,
   Input,
   InputProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import {
   Conversation,
   ConversationProps,

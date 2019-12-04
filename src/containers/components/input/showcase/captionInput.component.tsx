@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Input,
   InputProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 
 type InputElement = React.ReactElement<InputProps>;
 

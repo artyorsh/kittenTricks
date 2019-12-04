@@ -3,11 +3,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Button,
   ButtonProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 
 interface ListDerivedProps {
   index?: number;

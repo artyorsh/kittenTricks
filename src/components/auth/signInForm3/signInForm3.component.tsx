@@ -7,7 +7,7 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { ValidationInput } from '@src/components/common';
 import {
   EmailIconFill,

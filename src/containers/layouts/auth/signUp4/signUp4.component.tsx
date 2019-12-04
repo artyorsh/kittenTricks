@@ -8,11 +8,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Button,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import {
   SignUpForm2,
   SignUpForm2Data,

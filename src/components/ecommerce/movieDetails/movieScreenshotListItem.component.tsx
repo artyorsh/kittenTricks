@@ -7,7 +7,7 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 
 export type MovieScreenshotListItemProps = ThemedComponentProps & ImageProps;
 

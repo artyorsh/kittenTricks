@@ -7,7 +7,7 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 
 export type ProfileActivityList2ItemProps = ThemedComponentProps & ImageProps;
 

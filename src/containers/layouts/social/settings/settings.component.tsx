@@ -7,11 +7,11 @@ import {
   ThemeType,
   withStyles,
   ThemedComponentProps,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Toggle,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { ContainerView } from '@src/components/common';
 
 interface ComponentProps {

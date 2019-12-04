@@ -7,7 +7,7 @@ import {
   withStyles,
   ThemeType,
   ThemedComponentProps,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { StarIconFill } from '@src/assets/icons';
 
 type ComplexComponentShowcaseProps = ThemedComponentProps & ViewProps;

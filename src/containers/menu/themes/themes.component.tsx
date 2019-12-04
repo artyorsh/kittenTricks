@@ -3,13 +3,13 @@ import { ListRenderItemInfo } from 'react-native';
 import {
   List,
   ListItemProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import {
   ThemedComponentProps,
   ThemeProvider,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { ThemeCard } from './themeCard.component';
 import { Theme } from './type';
 import { fireAnalyticsEvent } from '@src/core/utils/analytics';

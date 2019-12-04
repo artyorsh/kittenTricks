@@ -6,7 +6,7 @@ import {
 import {
   Text,
   TextProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 
 const { width } = Dimensions.get('window');
 

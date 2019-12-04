@@ -6,11 +6,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   List,
   ListProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { Product } from '@src/core/model';
 import {
   ProductListItem,

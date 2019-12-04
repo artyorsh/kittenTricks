@@ -15,14 +15,14 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Button,
   ListItem,
   ListItemProps,
   Text,
   ViewPagerProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import {
   CameraIconFill,
   FileTextIconFill,

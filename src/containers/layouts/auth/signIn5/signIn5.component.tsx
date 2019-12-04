@@ -4,13 +4,13 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Button,
   Tab,
   TabView,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import {
   SignInForm3,
   SignInForm3Data,

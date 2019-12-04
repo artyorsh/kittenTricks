@@ -3,12 +3,12 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Tab,
   TabProps,
   TabView,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { ProductList } from '@src/components/ecommerce';
 import { Product } from '@src/core/model';
 

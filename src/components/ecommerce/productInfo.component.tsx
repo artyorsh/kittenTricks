@@ -9,13 +9,13 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Radio,
   RadioGroup,
   RadioProps,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 
 interface ComponentProps {
   image: ImageSourcePropType;

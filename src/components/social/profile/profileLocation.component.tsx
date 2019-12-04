@@ -13,11 +13,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Text,
   TextProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 
 type IconProp = (style: StyleType) => React.ReactElement<ImageProps>;
 type ChildrenProp = string;

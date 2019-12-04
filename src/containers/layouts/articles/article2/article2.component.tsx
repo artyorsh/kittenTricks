@@ -7,11 +7,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Avatar,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { ArticleActivityBar } from '@src/components/articles';
 import { ContainerView } from '@src/components/common';
 import { ClockIconOutline } from '@src/assets/icons';

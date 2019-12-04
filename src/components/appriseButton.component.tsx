@@ -11,8 +11,8 @@ import {
   styled,
   StyledComponentProps,
   StyleType,
-} from '@kitten/theme';
-import { IconElement } from '@kitten/ui';
+} from '@ui-kitten/components';
+import { IconElement } from '@ui-kitten/components';
 
 interface AppriseButtonProps extends StyledComponentProps, TouchableOpacityProps {
   status?: string;

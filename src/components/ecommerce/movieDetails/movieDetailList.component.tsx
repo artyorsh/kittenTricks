@@ -7,7 +7,7 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { MovieDetail } from '@src/core/model';
 import {
   MovieDetailListItem,

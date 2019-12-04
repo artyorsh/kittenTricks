@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Text,
   TextProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 
 type TextElement = React.ReactElement<TextProps>;
 

@@ -3,7 +3,7 @@ import {
   withStyles,
   ThemeType,
   ThemedComponentProps,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { LayoutMenu } from '@src/components/common';
 import { EcommerceData } from './type';
 

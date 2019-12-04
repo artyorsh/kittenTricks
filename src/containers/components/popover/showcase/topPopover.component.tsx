@@ -1,5 +1,5 @@
 import React from 'react';
-import { PopoverProps } from '@kitten/ui';
+import { PopoverProps } from '@ui-kitten/components';
 import { PopoverShowcase } from './popoverShowcase.component';
 
 type PopoverElement = React.ReactElement<PopoverProps>;

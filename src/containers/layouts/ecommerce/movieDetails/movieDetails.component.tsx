@@ -4,11 +4,11 @@ import {
   withStyles,
   ThemeType,
   ThemedComponentProps,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Button,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import {
   MovieDetailList,
   MovieHeader,

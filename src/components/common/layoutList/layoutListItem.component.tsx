@@ -3,12 +3,12 @@ import {
   ListItem,
   ListItemProps,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { LayoutListItemData } from './type';
 
 interface ComponentProps {

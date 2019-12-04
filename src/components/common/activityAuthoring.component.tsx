@@ -4,13 +4,13 @@ import {
   View,
   ViewProps,
 } from 'react-native';
-import { Text } from '@kitten/ui';
+import { Text } from '@ui-kitten/components';
 import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
-import { Avatar } from '@kitten/ui';
+} from '@ui-kitten/components';
+import { Avatar } from '@ui-kitten/components';
 
 interface ComponentProps {
   photo: ImageSourcePropType;

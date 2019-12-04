@@ -10,12 +10,12 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   List,
   Button,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { Product as ProductModel } from '@src/core/model';
 import { BuyActionModel } from './productDetails.container';
 

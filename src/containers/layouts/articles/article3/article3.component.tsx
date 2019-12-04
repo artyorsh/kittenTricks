@@ -7,12 +7,12 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Input,
   Layout,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { CommentsList1 } from '@src/components/articles';
 import { ContainerView } from '@src/components/common';
 import {

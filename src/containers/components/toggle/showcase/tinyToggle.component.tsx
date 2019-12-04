@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Toggle,
   ToggleProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 
 interface ToggleShowcaseComponentState {
   checked: boolean;

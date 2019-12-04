@@ -5,7 +5,7 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Avatar,
   AvatarProps,
@@ -13,7 +13,7 @@ import {
   TopNavigationAction,
   TopNavigationActionProps,
   TopNavigationProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { ArrowBackFill } from '@src/assets/icons';
 import { SafeAreaView } from '@src/core/navigation';
 import { Profile } from '@src/core/model';

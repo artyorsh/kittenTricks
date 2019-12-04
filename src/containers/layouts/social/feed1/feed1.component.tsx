@@ -4,9 +4,9 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { Training } from '@src/core/model';
-import { List } from '@kitten/ui';
+import { List } from '@ui-kitten/components';
 import {
   Feed1ListItem,
   Feed1ListItemProps,

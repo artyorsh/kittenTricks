@@ -4,8 +4,8 @@ import {
   dark,
   mapping,
 } from '@eva-design/eva';
-import { ApplicationProvider } from '@kitten/theme';
-import { IconRegistry } from '@kitten/ui';
+import { ApplicationProvider } from '@ui-kitten/components';
+import { IconRegistry } from '@ui-kitten/components';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
 import {
   ApplicationLoader,

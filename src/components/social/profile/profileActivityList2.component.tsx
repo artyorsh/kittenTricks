@@ -8,12 +8,12 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   List,
   ListItem,
   ListProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import {
   ProfileActivityList2Item,
   ProfileActivityList2ItemProps,

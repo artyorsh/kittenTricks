@@ -5,11 +5,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   BottomNavigation,
   BottomNavigationTab,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import {
   ColorPaletteIconOutline,
   LayoutIconOutline,

@@ -5,7 +5,7 @@ import {
   TopNavigationProps,
   TopNavigationAction,
   TopNavigationActionProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import {
   StarIconFill,
   ArrowBackFill,

@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BottomNavigation,
   BottomNavigationTab,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { StarIconFill } from '@src/assets/icons';
 
 interface State {

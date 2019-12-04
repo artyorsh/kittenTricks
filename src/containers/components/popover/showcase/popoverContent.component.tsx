@@ -7,12 +7,12 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   Button,
   Text,
   Avatar,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { Profile } from '@src/core/model';
 
 interface ComponentProps {

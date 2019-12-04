@@ -5,7 +5,7 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { DoneAllIconOutline } from '@src/assets/icons';
 import { Message } from '@src/core/model';
 

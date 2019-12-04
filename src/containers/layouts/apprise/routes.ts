@@ -1,4 +1,5 @@
 import {
+  imageChat2Layout,
   imageConversationListLayout,
   imageForgotPasswordLayout,
   imageProfile7Layout,
@@ -36,12 +37,12 @@ export const routes: AppriseContainerData[] = [
     title: 'Messaging',
     description: 'Apprise Version',
     image: imageConversationListLayout.imageSource,
-    route: 'Profile 7',
+    route: 'Conversations List',
   },
   {
     title: 'Chat',
     description: 'Apprise Version',
-    image: imageConversationListLayout.imageSource,
+    image: imageChat2Layout.imageSource,
     route: 'Chat 2',
   },
 ];

@@ -8,7 +8,7 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { Message } from '@src/core/model';
 import { ChatFileMessageAppearance } from './type';
 

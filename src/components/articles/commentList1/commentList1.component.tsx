@@ -7,11 +7,11 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   List,
   ListProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { Comment } from '@src/core/model';
 import {
   CommentList1Item,

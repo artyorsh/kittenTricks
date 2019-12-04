@@ -4,7 +4,7 @@ import {
   CheckBoxProps,
   Popover,
   PopoverProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import {
   PopoverContent,
   PopoverContentProps,

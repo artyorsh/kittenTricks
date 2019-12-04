@@ -4,7 +4,7 @@ import {
   withStyles,
   ThemeType,
   ThemedComponentProps,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import {
   ComponentsList,
   ComponentsListItemData,

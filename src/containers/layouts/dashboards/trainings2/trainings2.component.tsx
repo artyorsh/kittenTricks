@@ -3,10 +3,10 @@ import {
   ThemedComponentProps,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { Exercise } from '@src/core/model/exercise.model';
 import { ListRenderItemInfo } from 'react-native';
-import { List } from '@kitten/ui';
+import { List } from '@ui-kitten/components';
 import {
   TrainingCard3,
   TrainingCardProps,

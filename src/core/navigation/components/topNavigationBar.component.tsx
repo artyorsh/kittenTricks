@@ -3,14 +3,14 @@ import {
   StyleType,
   ThemeType,
   withStyles,
-} from '@kitten/theme';
+} from '@ui-kitten/components';
 import { ImageProps } from 'react-native';
 import {
   TopNavigation,
   TopNavigationAction,
   TopNavigationActionProps,
   TopNavigationProps,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { SafeAreaView } from './safeAreaView.component';
 
 export interface ComponentProps {

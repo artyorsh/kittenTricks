@@ -4,7 +4,7 @@ import {
   TabView,
   TabViewProps,
   Text,
-} from '@kitten/ui';
+} from '@ui-kitten/components';
 import { StarIconFill } from '@src/assets/icons';
 
 type TabViewElement = React.ReactElement<TabViewProps>;

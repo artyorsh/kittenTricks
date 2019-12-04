@@ -1,4 +1,4 @@
-import { StyleType } from '@kitten/theme';
+import { StyleType } from '@ui-kitten/components';
 
 export enum Alignments {
   'ROW-LEFT' = 'row-left',
