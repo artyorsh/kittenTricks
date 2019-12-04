@@ -325,7 +325,7 @@ const AppNavigator: NavigationContainer = createStackNavigator({
   ...EcommerceNavigationMap,
 }, {
   headerMode: 'screen',
-  // initialRouteName: 'Article 3',
+  initialRouteName: 'Profile 7',
   defaultNavigationOptions: {
     header: null,
   },

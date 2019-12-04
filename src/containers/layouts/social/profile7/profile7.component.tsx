@@ -31,6 +31,7 @@ import {
 } from '@src/core/model';
 import { ContainerView } from '@src/components/common';
 import { imageBrandBg } from '@src/assets/images';
+import { AppriseButton } from '@src/components/appriseButton.component';
 
 interface ComponentProps {
   profile: ProfileModel;
@@ -141,7 +142,7 @@ class Profile7Component extends React.Component<Profile7Props> {
               data={profile.friends}
               onItemPress={this.onFriendPress}
             />
-            <Button
+            <AppriseButton
               style={themedStyle.addFriendButton}
               appearance='outline'
               status='control'
@@ -215,9 +216,6 @@ export const Profile7 = withStyles(Profile7Component, (theme: ThemeType) => ({
     paddingHorizontal: 12,
   },
   addFriendButton: {
-    width: 36,
-    height: 36,
-    borderRadius: 36,
     marginHorizontal: 12,
   },
 }));

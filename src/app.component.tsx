@@ -5,6 +5,8 @@ import {
   mapping,
 } from '@eva-design/eva';
 import { ApplicationProvider } from '@kitten/theme';
+import { IconRegistry } from '@kitten/ui';
+import { EvaIconsPack } from '@ui-kitten/eva-icons';
 import {
   ApplicationLoader,
   Assets,
@@ -15,9 +17,8 @@ import {
   getCurrentStateName,
   RouteState,
 } from './core/navigation/util';
-import { IconRegistry } from '@kitten/ui';
-import { EvaIconsPack } from '@ui-kitten/eva-icons';
 import { default as appTheme } from './core/themes/appTheme.json';
+import { default as appMapping } from './mapping.json';
 
 const images: ImageRequireSource[] = [
   require('./assets/images/source/image-profile-1.jpg'),
@@ -68,7 +69,7 @@ export default class App extends React.Component {
         <ApplicationProvider
           mapping={mapping}
           theme={{ ...dark, ...appTheme }}
-          customMapping={{ strict: { 'text-font-family': 'opensans-semibold' } }}>
+          customMapping={appMapping}>
           <Router onNavigationStateChange={this.onNavigationStateChange}/>
         </ApplicationProvider>
       </ApplicationLoader>
